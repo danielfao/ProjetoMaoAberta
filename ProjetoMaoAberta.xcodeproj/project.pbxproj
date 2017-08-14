@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */; };
 		E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B309591F41C2D400666BF4 /* AppDelegate.swift */; };
 		E0B3095C1F41C2D400666BF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3095B1F41C2D400666BF4 /* ViewController.swift */; };
 		E0B3095F1F41C2D400666BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B3095D1F41C2D400666BF4 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.release.xcconfig"; sourceTree = "<group>"; };
+		7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.debug.xcconfig"; sourceTree = "<group>"; };
+		B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoMaoAberta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B309561F41C2D400666BF4 /* ProjetoMaoAberta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoMaoAberta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B309591F41C2D400666BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B3095B1F41C2D400666BF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		71684512BC623FDD8698461F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */,
+				51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E0B3094D1F41C2D400666BF4 = {
 			isa = PBXGroup;
 			children = (
 				E0B309581F41C2D400666BF4 /* ProjetoMaoAberta */,
 				E0B309571F41C2D400666BF4 /* Products */,
+				71684512BC623FDD8698461F /* Pods */,
+				E859791F2992A706F3D18667 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +80,14 @@
 			path = ProjetoMaoAberta;
 			sourceTree = "<group>";
 		};
+		E859791F2992A706F3D18667 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0B309681F41C2D400666BF4 /* Build configuration list for PBXNativeTarget "ProjetoMaoAberta" */;
 			buildPhases = (
+				F969BE39F7D3CDF1E47767D4 /* [CP] Check Pods Manifest.lock */,
 				E0B309521F41C2D400666BF4 /* Sources */,
 				E0B309531F41C2D400666BF4 /* Frameworks */,
 				E0B309541F41C2D400666BF4 /* Resources */,
+				6FBC8E1CFFA94AA1A6D5F601 /* [CP] Embed Pods Frameworks */,
+				CA03D23F0344053AA6A03053 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6FBC8E1CFFA94AA1A6D5F601 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA03D23F0344053AA6A03053 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F969BE39F7D3CDF1E47767D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0B309521F41C2D400666BF4 /* Sources */ = {
@@ -261,6 +336,7 @@
 		};
 		E0B309691F41C2D400666BF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W5849F638E;
@@ -274,6 +350,7 @@
 		};
 		E0B3096A1F41C2D400666BF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W5849F638E;
