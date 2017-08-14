@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="q06-5A-N6x">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="sa2-3F-Wm4">
+            <objects>
+                <navigationController id="q06-5A-N6x" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="oZF-hK-x3R">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Nid-52-994" kind="relationship" relationship="rootViewController" id="PdJ-Vq-ddQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jJJ-Pw-cPJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310" y="-80"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="leG-jY-IpA">
+            <objects>
+                <viewController id="Nid-52-994" customClass="LoginViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DGS-Sz-dPz"/>
+                        <viewControllerLayoutGuide type="bottom" id="5l8-4l-S7F"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sZ0-O8-cAZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vbV-Pi-k1A" userLabel="emailTextField">
+                                <rect key="frame" x="40" y="198.5" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="9NG-PI-gS5"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Frm-19-hmR">
+                                <rect key="frame" x="40" y="308.5" width="295" height="50"/>
+                                <color key="backgroundColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="z3c-3n-X8j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Logar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didTapLoginButton:" destination="Nid-52-994" eventType="touchUpInside" id="Cdo-Fh-mbU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3B-Ov-ASd">
+                                <rect key="frame" x="40" y="378.5" width="295" height="37"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                <state key="normal" title="Criar nova conta">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapCreateAccountButton:" destination="Nid-52-994" eventType="touchUpInside" id="3mn-Fg-TZV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CY6-4R-bly" userLabel="passwordTextField">
+                                <rect key="frame" x="40" y="248.5" width="295" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="TvA-4h-17c"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.094117647058823528" green="0.73725490196078436" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Q3B-Ov-ASd" secondAttribute="trailing" constant="40" id="5gW-th-LHD"/>
+                            <constraint firstItem="Frm-19-hmR" firstAttribute="centerY" secondItem="sZ0-O8-cAZ" secondAttribute="centerY" id="5yF-gg-4Ml"/>
+                            <constraint firstItem="Frm-19-hmR" firstAttribute="top" secondItem="CY6-4R-bly" secondAttribute="bottom" constant="20" id="Ddd-nC-g1o"/>
+                            <constraint firstItem="Frm-19-hmR" firstAttribute="leading" secondItem="sZ0-O8-cAZ" secondAttribute="leading" constant="40" id="N4y-Un-jmY"/>
+                            <constraint firstItem="CY6-4R-bly" firstAttribute="leading" secondItem="sZ0-O8-cAZ" secondAttribute="leading" constant="40" id="NeD-WU-3nO"/>
+                            <constraint firstAttribute="trailing" secondItem="Frm-19-hmR" secondAttribute="trailing" constant="40" id="O7E-ao-ddk"/>
+                            <constraint firstItem="Q3B-Ov-ASd" firstAttribute="leading" secondItem="sZ0-O8-cAZ" secondAttribute="leading" constant="40" id="PGu-W6-KEF"/>
+                            <constraint firstItem="Q3B-Ov-ASd" firstAttribute="top" secondItem="Frm-19-hmR" secondAttribute="bottom" constant="20" id="RUT-9C-2eh"/>
+                            <constraint firstItem="vbV-Pi-k1A" firstAttribute="leading" secondItem="sZ0-O8-cAZ" secondAttribute="leading" constant="40" id="YJf-Kb-UyA"/>
+                            <constraint firstItem="CY6-4R-bly" firstAttribute="top" secondItem="vbV-Pi-k1A" secondAttribute="bottom" constant="10" id="g5m-W5-BaM"/>
+                            <constraint firstAttribute="trailing" secondItem="CY6-4R-bly" secondAttribute="trailing" constant="40" id="mjh-c3-PPc"/>
+                            <constraint firstAttribute="trailing" secondItem="vbV-Pi-k1A" secondAttribute="trailing" constant="40" id="pEG-Um-C2U"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="P3W-jA-Kfu"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="vbV-Pi-k1A" id="h4M-a1-NpY"/>
+                        <outlet property="passwordTextField" destination="CY6-4R-bly" id="2jp-3c-hmd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HWC-sH-FZT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="598" y="-81"/>
+        </scene>
+    </scenes>
+</document>

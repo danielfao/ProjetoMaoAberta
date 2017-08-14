@@ -6,5 +6,9 @@ target 'ProjetoMaoAberta' do
   use_frameworks!
 
   # Pods for ProjetoMaoAberta
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Storage'
 
 end
