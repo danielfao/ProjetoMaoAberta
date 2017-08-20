@@ -21,8 +21,17 @@ class LoginViewController: UIViewController {
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        //Keyboard functions
+        self.hideKeyboardWhenTappedAround()
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,43 +39,29 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    
- 
-    //MARK: - IBActions
-    @IBAction func didTapCreateAccountButton(_ sender: Any) {
-        //FIXME: Create a register screen
-        //For now will register the new user here. Creates a register screen
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().createUser(withEmail: email, password: password, completion: { (user, error) in
-                if let firebaseError = error {
-                    print(firebaseError.localizedDescription)
-                    return
-                }
-                self.presentLoggedInScreen()
-                print("Account created with success!")
-            })
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
         }
     }
     
-    @IBAction func didTapLoginButton(_ sender: Any) {
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
-                if let firebaseError = error {
-                    print(firebaseError.localizedDescription)
-                    return
-                }
-                print("Logged in with success")
-                self.presentLoggedInScreen()
-            })
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
         }
     }
-    
+
     func presentLoggedInScreen(){
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let loggedInVC: LoginViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! LoginViewController
         self.present(loggedInVC, animated: true, completion: nil)
     }
     
+    //MARK: - IBAction
     @IBAction func loginSegmentedControl(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0, animations: { 

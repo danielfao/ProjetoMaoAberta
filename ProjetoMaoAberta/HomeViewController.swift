@@ -21,15 +21,4 @@ class HomeViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    //MARK: - IBAction
-    @IBAction func didTapLogoutButton(_ sender: Any) {
-        do {
-            try Auth.auth().signOut()
-            dismiss(animated: true, completion: nil)
-        } catch let logoutError {
-            print(logoutError)
-        }
-    }
-    
 }

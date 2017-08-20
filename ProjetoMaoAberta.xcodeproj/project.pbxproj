@@ -14,6 +14,7 @@
 		11170CDA1F41FD25008A3F50 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CD91F41FD25008A3F50 /* HomeViewController.swift */; };
 		1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1174E4531F41DBB20029921F /* GoogleService-Info.plist */; };
 		3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */; };
+		E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A7461A1F4A544700FBC21A /* AppUtils.swift */; };
 		E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B309591F41C2D400666BF4 /* AppDelegate.swift */; };
 		E0B3095C1F41C2D400666BF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B3095B1F41C2D400666BF4 /* ViewController.swift */; };
 		E0B3095F1F41C2D400666BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B3095D1F41C2D400666BF4 /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.release.xcconfig"; sourceTree = "<group>"; };
 		7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.debug.xcconfig"; sourceTree = "<group>"; };
 		B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoMaoAberta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0A7461A1F4A544700FBC21A /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		E0B309561F41C2D400666BF4 /* ProjetoMaoAberta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoMaoAberta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B309591F41C2D400666BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0B3095B1F41C2D400666BF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				11170CD51F41E7A9008A3F50 /* Constants.swift */,
+				E0A7461A1F4A544700FBC21A /* AppUtils.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				11170CDA1F41FD25008A3F50 /* HomeViewController.swift in Sources */,
 				11170CD01F41E06B008A3F50 /* LoginViewController.swift in Sources */,
 				E0B3095C1F41C2D400666BF4 /* ViewController.swift in Sources */,
+				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
 				E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */,
 				11170CD61F41E7A9008A3F50 /* Constants.swift in Sources */,
 			);
