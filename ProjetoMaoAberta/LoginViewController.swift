@@ -10,10 +10,13 @@ import UIKit
 import Firebase
 
 class LoginViewController: UIViewController {
-    
     //MARK: - Outlets
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var clientViewContainer: UIView!
+    @IBOutlet weak var companyViewContainer: UIView!
+    
     
     //MARK: - Functions
     override func viewDidLoad() {
@@ -26,6 +29,8 @@ class LoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
  
     //MARK: - IBActions
     @IBAction func didTapCreateAccountButton(_ sender: Any) {
@@ -60,5 +65,19 @@ class LoginViewController: UIViewController {
         let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
         let loggedInVC: LoginViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! LoginViewController
         self.present(loggedInVC, animated: true, completion: nil)
+    }
+    
+    @IBAction func loginSegmentedControl(_ sender: UISegmentedControl) {
+        if sender.selectedSegmentIndex == 0 {
+            UIView.animate(withDuration: 0, animations: { 
+                self.clientViewContainer.alpha = 1.0
+                self.companyViewContainer.alpha = 0.0
+            })
+        }else if sender.selectedSegmentIndex == 1 {
+            UIView.animate(withDuration: 0, animations: {
+                self.clientViewContainer.alpha = 0.0
+                self.companyViewContainer.alpha = 1.0
+            })
+        }
     }
 }
