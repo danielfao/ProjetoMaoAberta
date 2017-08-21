@@ -13,13 +13,16 @@ class LoginViewController: UIViewController {
     //MARK: - Outlets
     @IBOutlet weak var clientViewContainer: UIView!
     @IBOutlet weak var companyViewContainer: UIView!
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
     
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.navigationController?.setNavigationBarHidden(true, animated: false)
+        
+        self.segmentedControl.selectedSegmentIndex = 0
+        loginSegmentedControl(segmentedControl)
         
         //Keyboard functions
         self.hideKeyboardWhenTappedAround()
@@ -60,17 +63,17 @@ class LoginViewController: UIViewController {
         self.present(loggedInVC, animated: true, completion: nil)
     }
     
-    //MARK: - IBAction
+    //MARK: - IBActions
     @IBAction func loginSegmentedControl(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
             UIView.animate(withDuration: 0, animations: { 
-                self.clientViewContainer.alpha = 1.0
-                self.companyViewContainer.alpha = 0.0
+                self.clientViewContainer.isHidden = false
+                self.companyViewContainer.isHidden = true
             })
         }else if sender.selectedSegmentIndex == 1 {
             UIView.animate(withDuration: 0, animations: {
-                self.clientViewContainer.alpha = 0.0
-                self.companyViewContainer.alpha = 1.0
+                self.clientViewContainer.isHidden = true
+                self.companyViewContainer.isHidden = false
             })
         }
     }
