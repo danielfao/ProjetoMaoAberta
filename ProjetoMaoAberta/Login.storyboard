@@ -25,10 +25,10 @@
             </objects>
             <point key="canvasLocation" x="-310" y="-80"/>
         </scene>
-        <!--Master Login View Controller-->
+        <!--Main Login View Controller-->
         <scene sceneID="leG-jY-IpA">
             <objects>
-                <viewController id="Nid-52-994" userLabel="Master Login View Controller" customClass="LoginViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Nid-52-994" customClass="MainLoginViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DGS-Sz-dPz"/>
                         <viewControllerLayoutGuide type="bottom" id="5l8-4l-S7F"/>
@@ -55,13 +55,13 @@
                                     <constraint firstAttribute="height" constant="256" id="0mP-VK-KvM"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="HPJ-Oc-jsr" kind="embed" id="omx-qi-m4z"/>
+                                    <segue destination="HPJ-Oc-jsr" kind="embed" identifier="RegisterClientIdentifier" id="omx-qi-m4z"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DbI-fA-9Wz" userLabel="Company Container View">
                                 <rect key="frame" x="24" y="387" width="327" height="256"/>
                                 <connections>
-                                    <segue destination="08k-X0-Xkm" kind="embed" id="6yE-kO-4uk"/>
+                                    <segue destination="08k-X0-Xkm" kind="embed" identifier="RegisterCompanyIdentifier" id="6yE-kO-4uk"/>
                                 </connections>
                             </containerView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bar" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="6RH-Jy-llX">
@@ -199,11 +199,20 @@
                     <connections>
                         <outlet property="emailTextField" destination="vcp-yZ-wW1" id="ufo-OZ-WfJ"/>
                         <outlet property="passwordTextField" destination="aGb-HB-iC2" id="jFk-Hc-gLY"/>
+                        <segue destination="TEG-yh-JSh" kind="show" identifier="LoginClientToRegisterSegue" id="cFV-3k-WVL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz0-x2-U73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="281" y="557"/>
+        </scene>
+        <!--RegisterClient-->
+        <scene sceneID="VKY-EO-L5P">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegisterClient" id="TEG-yh-JSh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VJT-2S-abU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="281" y="851"/>
         </scene>
         <!--Login Company-->
         <scene sceneID="cHd-ci-cTN">
@@ -296,11 +305,20 @@
                     <connections>
                         <outlet property="emailTextField" destination="etV-DT-p6b" id="fbo-ko-7P6"/>
                         <outlet property="passwordTextField" destination="DWW-pK-isb" id="olY-uZ-Cgh"/>
+                        <segue destination="RwC-xm-7FQ" kind="show" identifier="LoginCompanyToRegisterSegue" id="j25-yG-XYx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOd-NS-ek2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908" y="556"/>
+        </scene>
+        <!--RegisterCompany-->
+        <scene sceneID="cNq-XO-q60">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RegisterCompany" id="RwC-xm-7FQ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zp-ar-uZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="908" y="851"/>
         </scene>
     </scenes>
     <resources>

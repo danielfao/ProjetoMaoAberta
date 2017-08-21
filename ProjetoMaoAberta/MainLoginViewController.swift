@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  MainLoginViewController.swift
 //  ProjetoMaoAberta
 //
 //  Created by Daniel Oliveira on 8/14/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class MainLoginViewController: UIViewController {
     
     //MARK: - Outlets
     @IBOutlet weak var clientViewContainer: UIView!
@@ -19,19 +19,24 @@ class LoginViewController: UIViewController {
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(true, animated: false)
         
         self.segmentedControl.selectedSegmentIndex = 0
         loginSegmentedControl(segmentedControl)
         
         //Keyboard functions
         self.hideKeyboardWhenTappedAround()
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(LoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainLoginViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(MainLoginViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = true
+        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isTranslucent = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,12 +60,6 @@ class LoginViewController: UIViewController {
                 self.view.frame.origin.y += keyboardSize.height
             }
         }
-    }
-
-    func presentLoggedInScreen(){
-        let storyboard: UIStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        let loggedInVC: LoginViewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! LoginViewController
-        self.present(loggedInVC, animated: true, completion: nil)
     }
     
     //MARK: - IBActions

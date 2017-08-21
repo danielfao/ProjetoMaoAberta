@@ -17,10 +17,8 @@ class LoginCompanyViewController: UIViewController {
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,6 +29,10 @@ class LoginCompanyViewController: UIViewController {
     }
     
     @IBAction func didTapCreateNewAccountButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Storyboards.RegisterCompanyStoryboard, bundle: nil)
+        let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterCompanyViewController) as! RegisterCompanyViewController
+        navigationController?.pushViewController(registerCompanyViewController, animated: true)
+        
     }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {

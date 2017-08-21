@@ -17,8 +17,6 @@ class LoginClientViewController: UIViewController {
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +29,9 @@ class LoginClientViewController: UIViewController {
     }
     
     @IBAction func didTapCreateNewAccountButton(_ sender: Any) {
-    }
+        let storyboard = UIStoryboard(name: Storyboards.RegisterClientStoryboard, bundle: nil)
+        let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterClientViewController) as! RegisterClientViewController
+        navigationController?.pushViewController(registerCompanyViewController, animated: true)    }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
     }
