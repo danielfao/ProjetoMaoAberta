@@ -7,13 +7,10 @@
 //
 
 import UIKit
-import Firebase
 
 class LoginViewController: UIViewController {
-    //MARK: - Outlets
-    @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
     
+    //MARK: - Outlets
     @IBOutlet weak var clientViewContainer: UIView!
     @IBOutlet weak var companyViewContainer: UIView!
     
@@ -39,6 +36,7 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Slides the view up when the keyboard is shown
     func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y == 0{
@@ -47,6 +45,7 @@ class LoginViewController: UIViewController {
         }
     }
     
+    //Slides the view back when keyboard is hidden
     func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{
