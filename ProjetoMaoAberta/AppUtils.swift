@@ -19,3 +19,13 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
+
+func setProfileCircleImageView(image: UIImageView) -> UIImageView {
+    image.layer.cornerRadius = image.frame.size.width / 2
+    image.clipsToBounds = true
+    
+    image.layer.borderWidth = 3.0
+    image.layer.borderColor = UIColor.white.cgColor
+    
+    return image
+}
