@@ -10,6 +10,8 @@
 		11170CCD1F41E00F008A3F50 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11170CCC1F41E00F008A3F50 /* Login.storyboard */; };
 		11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */; };
 		11170CD61F41E7A9008A3F50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CD51F41E7A9008A3F50 /* Constants.swift */; };
+		1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1126B9521F4C74E400962477 /* CompanyProfile.storyboard */; };
+		1126B9551F4C76E900962477 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */; };
 		11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */; };
 		11357CEE1F4B07320026AF82 /* RegisterCompany.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */; };
 		1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1174E4531F41DBB20029921F /* GoogleService-Info.plist */; };
@@ -32,6 +34,8 @@
 		11170CCC1F41E00F008A3F50 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLoginViewController.swift; sourceTree = "<group>"; };
 		11170CD51F41E7A9008A3F50 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1126B9521F4C74E400962477 /* CompanyProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyProfile.storyboard; sourceTree = "<group>"; };
+		1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterClient.storyboard; sourceTree = "<group>"; };
 		11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterCompany.storyboard; sourceTree = "<group>"; };
 		1174E4531F41DBB20029921F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 				11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */,
 				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
 				11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */,
+				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -128,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */,
+				1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */,
 				E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */,
 				E0B309611F41C2D400666BF4 /* Assets.xcassets in Resources */,
 				1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */,
@@ -323,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1126B9551F4C76E900962477 /* CompanyProfileViewController.swift in Sources */,
 				119A63521F4B20CA00BE8E32 /* RegisterCompanyViewController.swift in Sources */,
 				119A63491F4B1B1900BE8E32 /* LoginClientViewController.swift in Sources */,
 				11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */,

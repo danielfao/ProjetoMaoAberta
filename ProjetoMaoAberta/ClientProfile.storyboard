@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -37,37 +38,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-Ah-TRj" userLabel="clientNameTextView">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x4g-Ah-TRj" userLabel="nameTextView">
                                 <rect key="frame" x="32" y="265" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7uu-wm-Dvb" userLabel="emailClientTextView">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7uu-wm-Dvb" userLabel="emailTextView">
                                 <rect key="frame" x="32" y="305" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIX-dY-Sjw" userLabel="phoneNumberClientTextView">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Telefone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VIX-dY-Sjw" userLabel="phoneNumberTextView">
                                 <rect key="frame" x="32" y="345" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vli-8p-GaV" userLabel="passwordClientTextView">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vli-8p-GaV" userLabel="passwordTextView">
                                 <rect key="frame" x="32" y="385" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6u-CQ-NVi" userLabel="confirmPasswordClientTextView">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6u-CQ-NVi" userLabel="confirmPasswordTextView">
                                 <rect key="frame" x="32" y="425" width="311" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-3N-ROC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-3N-ROC" userLabel="updateButton">
                                 <rect key="frame" x="32" y="585" width="311" height="50"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -86,15 +87,19 @@
                                     <action selector="didTapUpdateButton:" destination="bpa-s1-ivC" eventType="touchUpInside" id="1LS-eF-6GP"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="dnC-aD-rMY" userLabel="profileImage">
-                                <rect key="frame" x="117" y="85" width="136" height="136"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="dnC-aD-rMY" userLabel="profileImage">
+                                <rect key="frame" x="119" y="88" width="136" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="136" id="SyT-vb-Ikf"/>
+                                    <constraint firstAttribute="width" secondItem="dnC-aD-rMY" secondAttribute="height" multiplier="1:1" id="p90-2T-ooN"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.094117647060000004" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="u6u-CQ-NVi" firstAttribute="top" secondItem="vli-8p-GaV" secondAttribute="bottom" constant="10" id="2YC-kg-GTT"/>
                             <constraint firstAttribute="trailing" secondItem="x4g-Ah-TRj" secondAttribute="trailing" constant="32" id="3XK-ih-M59"/>
+                            <constraint firstItem="dnC-aD-rMY" firstAttribute="centerX" secondItem="bIG-iH-RfN" secondAttribute="centerX" id="5Te-LE-rIG"/>
                             <constraint firstItem="VIX-dY-Sjw" firstAttribute="leading" secondItem="bIG-iH-RfN" secondAttribute="leading" constant="32" id="7Ke-Yl-hpT"/>
                             <constraint firstAttribute="trailing" secondItem="vli-8p-GaV" secondAttribute="trailing" constant="32" id="9cf-XD-VWu"/>
                             <constraint firstItem="7uu-wm-Dvb" firstAttribute="leading" secondItem="bIG-iH-RfN" secondAttribute="leading" constant="32" id="BBh-SK-ybf"/>
@@ -108,6 +113,7 @@
                             <constraint firstAttribute="trailing" secondItem="fPS-3N-ROC" secondAttribute="trailing" constant="32" id="bJ2-vw-XEB"/>
                             <constraint firstItem="vli-8p-GaV" firstAttribute="top" secondItem="VIX-dY-Sjw" secondAttribute="bottom" constant="10" id="j8h-C9-hxM"/>
                             <constraint firstItem="XLl-Ra-I6r" firstAttribute="top" secondItem="fPS-3N-ROC" secondAttribute="bottom" constant="32" id="j9m-9V-c0A"/>
+                            <constraint firstItem="dnC-aD-rMY" firstAttribute="top" secondItem="9nU-X2-j86" secondAttribute="bottom" constant="24" id="lUJ-Ul-QvP"/>
                             <constraint firstItem="fPS-3N-ROC" firstAttribute="leading" secondItem="bIG-iH-RfN" secondAttribute="leading" constant="32" id="omJ-Wl-Ubh"/>
                             <constraint firstItem="vli-8p-GaV" firstAttribute="leading" secondItem="bIG-iH-RfN" secondAttribute="leading" constant="32" id="wGB-bT-rCM"/>
                             <constraint firstAttribute="trailing" secondItem="u6u-CQ-NVi" secondAttribute="trailing" constant="32" id="yfS-Wd-dpv"/>
