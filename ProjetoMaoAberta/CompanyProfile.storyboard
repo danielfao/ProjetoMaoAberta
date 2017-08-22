@@ -68,7 +68,7 @@
                                                 <rect key="frame" x="32" y="284" width="311" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="numberPad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do responsável" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="flY-zR-1aR" userLabel="responsibleNameTextView">
                                                 <rect key="frame" x="32" y="322" width="311" height="30"/>
@@ -86,7 +86,7 @@
                                                 <rect key="frame" x="32" y="400" width="311" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="phonePad"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Endereço" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u6a-R3-YGM" userLabel="addressTextField">
                                                 <rect key="frame" x="32" y="438" width="311" height="30"/>
@@ -119,7 +119,7 @@
                                                     <constraint firstAttribute="height" constant="200" id="7JG-MW-FAR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                         <integer key="value" value="5"/>
@@ -141,18 +141,21 @@
                                                         <integer key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="didTapUpdateButton:" destination="giu-6A-azY" eventType="touchUpInside" id="GAK-GQ-mVx"/>
+                                                </connections>
                                             </button>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNZ-vk-hWG" userLabel="passwordTextView">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Alterar senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UNZ-vk-hWG" userLabel="passwordTextView">
                                                 <rect key="frame" x="32" y="798" width="311" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                             </textField>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idh-XA-ft0" userLabel="confirmPasswordTextView">
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirmar nova senha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idh-XA-ft0" userLabel="confirmPasswordTextView">
                                                 <rect key="frame" x="32" y="838" width="311" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.094117647060000004" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
@@ -223,6 +226,22 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LiH-mC-v5D"/>
+                    <connections>
+                        <outlet property="CNPJTextField" destination="eW7-ud-eGp" id="Xz6-Ww-R9z"/>
+                        <outlet property="addressTextField" destination="u6a-R3-YGM" id="JYJ-hm-a66"/>
+                        <outlet property="confirmPasswordTextField" destination="Idh-XA-ft0" id="oed-pY-QyW"/>
+                        <outlet property="descriptionTextView" destination="JmS-N2-gFl" id="M0A-6T-VyQ"/>
+                        <outlet property="emailTextField" destination="1pG-nq-KRE" id="SCj-I4-3DA"/>
+                        <outlet property="facebookTextField" destination="d9f-56-D7L" id="xBf-e6-8mo"/>
+                        <outlet property="nickNameTextField" destination="be5-dt-1yG" id="yq8-3A-tts"/>
+                        <outlet property="passwordTextField" destination="UNZ-vk-hWG" id="j3p-ZL-GHr"/>
+                        <outlet property="phoneNumberTextField" destination="uof-Ju-E4r" id="5uz-E7-95S"/>
+                        <outlet property="profileImageView" destination="UAr-V1-jgW" id="gS5-a5-AX0"/>
+                        <outlet property="realNameTextField" destination="xkl-oy-0m0" id="Att-Di-ObW"/>
+                        <outlet property="responsibleNameTextField" destination="flY-zR-1aR" id="N26-t1-9sw"/>
+                        <outlet property="twitterTextField" destination="IPs-7y-ee3" id="IFy-jg-Ag4"/>
+                        <outlet property="websiteTextField" destination="QEQ-n1-2Zu" id="SIg-xG-1iC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgD-PA-HgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
