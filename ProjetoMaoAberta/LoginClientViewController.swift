@@ -26,6 +26,18 @@ class LoginClientViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func didTapLoginButton(_ sender: Any) {
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        
+        if (email?.isEmpty)! || (password?.isEmpty)! {
+            let alert = UIAlertController(title: title, message: "Por favor, preencher todos os campos", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true, completion: nil)
+        } else {
+            print("Logar")
+        }
     }
     
     @IBAction func didTapCreateNewAccountButton(_ sender: Any) {

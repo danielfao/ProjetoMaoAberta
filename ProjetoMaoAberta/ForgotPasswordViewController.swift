@@ -58,6 +58,15 @@ class ForgotPasswordViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func didTapSendEmailButton(_ sender: Any) {
+        let email = emailTextField.text
+        
+        if (email?.isEmpty)! {
+            let alert = UIAlertController(title: title, message: "Por favor, digite o seu e-mail", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
     
 }
