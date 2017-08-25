@@ -25,6 +25,7 @@ struct Storyboards {
     static let MainLoginStoryboard : String! = "MainLogin"
     static let RegisterClientStoryboard : String! = "RegisterClient"
     static let RegisterCompanyStoryboard : String! = "RegisterCompany"
+    static let ForgotPasswordStoryboard : String! = "ForgotPassword"
     
 }
 
@@ -38,6 +39,7 @@ struct ViewControllers {
     static let RegisterCompanyViewController : String! = "registerCompanyViewController"
     static let LoginClientViewController : String! = "loginClientViewController"
     static let LoginCompanyViewController : String! = "loginCompanyViewController"
+    static let ForgotPasswordViewController : String! = "forgotPasswordViewController"
 }
 
 

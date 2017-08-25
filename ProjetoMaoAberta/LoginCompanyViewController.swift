@@ -36,6 +36,9 @@ class LoginCompanyViewController: UIViewController {
     }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Storyboards.ForgotPasswordStoryboard, bundle: nil)
+        let forgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.ForgotPasswordViewController) as! ForgotPasswordViewController
+        navigationController?.pushViewController(forgotPasswordViewController, animated: true)
     }
     
 }

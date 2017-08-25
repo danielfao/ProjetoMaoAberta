@@ -11,6 +11,8 @@
 		11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */; };
 		11170CD61F41E7A9008A3F50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CD51F41E7A9008A3F50 /* Constants.swift */; };
 		1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1125C2A21F5083B3003AF453 /* Assets.xcassets */; };
+		1125C2A51F508617003AF453 /* ForgotPassword.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1125C2A41F508617003AF453 /* ForgotPassword.storyboard */; };
+		1125C2A81F50864A003AF453 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */; };
 		1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1126B9521F4C74E400962477 /* CompanyProfile.storyboard */; };
 		1126B9551F4C76E900962477 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */; };
 		11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */; };
@@ -41,6 +43,8 @@
 		11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLoginViewController.swift; sourceTree = "<group>"; };
 		11170CD51F41E7A9008A3F50 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		1125C2A21F5083B3003AF453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1125C2A41F508617003AF453 /* ForgotPassword.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ForgotPassword.storyboard; sourceTree = "<group>"; };
+		1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		1126B9521F4C74E400962477 /* CompanyProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyProfile.storyboard; sourceTree = "<group>"; };
 		1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterClient.storyboard; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 				11A676291F50615800C2DBDF /* Client */,
 				11170CCC1F41E00F008A3F50 /* Login.storyboard */,
 				11A676341F5069C600C2DBDF /* About.storyboard */,
+				1125C2A41F508617003AF453 /* ForgotPassword.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -96,6 +101,7 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1125C2A61F508631003AF453 /* ForgotPassword */,
 				11A676361F5069D900C2DBDF /* About */,
 				11A6762F1F50666600C2DBDF /* TabBars */,
 				11EDE8CD1F4C5DAC007020F3 /* Profile */,
@@ -112,6 +118,14 @@
 				E0A7461A1F4A544700FBC21A /* AppUtils.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		1125C2A61F508631003AF453 /* ForgotPassword */ = {
+			isa = PBXGroup;
+			children = (
+				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
+			);
+			name = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		119A634C1F4B1BDE00BE8E32 /* Model */ = {
@@ -306,6 +320,7 @@
 				1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */,
 				1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */,
 				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
+				1125C2A51F508617003AF453 /* ForgotPassword.storyboard in Resources */,
 				E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */,
 				1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */,
 				11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */,
@@ -383,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1125C2A81F50864A003AF453 /* ForgotPasswordViewController.swift in Sources */,
 				1126B9551F4C76E900962477 /* CompanyProfileViewController.swift in Sources */,
 				119A63521F4B20CA00BE8E32 /* RegisterCompanyViewController.swift in Sources */,
 				119A63491F4B1B1900BE8E32 /* LoginClientViewController.swift in Sources */,

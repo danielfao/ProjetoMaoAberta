@@ -31,9 +31,13 @@ class LoginClientViewController: UIViewController {
     @IBAction func didTapCreateNewAccountButton(_ sender: Any) {
         let storyboard = UIStoryboard(name: Storyboards.RegisterClientStoryboard, bundle: nil)
         let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterClientViewController) as! RegisterClientViewController
-        navigationController?.pushViewController(registerCompanyViewController, animated: true)    }
+        navigationController?.pushViewController(registerCompanyViewController, animated: true)
+    }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
+        let storyboard = UIStoryboard(name: Storyboards.ForgotPasswordStoryboard, bundle: nil)
+        let forgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.ForgotPasswordViewController) as! ForgotPasswordViewController
+        navigationController?.pushViewController(forgotPasswordViewController, animated: true)
     }
     
 }
