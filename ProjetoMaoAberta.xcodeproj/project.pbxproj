@@ -21,6 +21,12 @@
 		119A634E1F4B1BF600BE8E32 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A634D1F4B1BF600BE8E32 /* Client.swift */; };
 		119A63501F4B1D0E00BE8E32 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A634F1F4B1D0E00BE8E32 /* Company.swift */; };
 		119A63521F4B20CA00BE8E32 /* RegisterCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A63511F4B20CA00BE8E32 /* RegisterCompanyViewController.swift */; };
+		11A6762C1F5061D500C2DBDF /* ClientTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */; };
+		11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */; };
+		11A676311F5066A200C2DBDF /* ClientTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A676301F5066A200C2DBDF /* ClientTabbarViewController.swift */; };
+		11A676331F5066B700C2DBDF /* CompanyTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A676321F5066B700C2DBDF /* CompanyTabbarViewController.swift */; };
+		11A676351F5069C600C2DBDF /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11A676341F5069C600C2DBDF /* About.storyboard */; };
+		11A676381F5069F500C2DBDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A676371F5069F500C2DBDF /* AboutViewController.swift */; };
 		11EDE8CC1F4C5585007020F3 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */; };
 		11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */; };
 		3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */; };
@@ -45,6 +51,12 @@
 		119A634D1F4B1BF600BE8E32 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		119A634F1F4B1D0E00BE8E32 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		119A63511F4B20CA00BE8E32 /* RegisterCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterCompanyViewController.swift; sourceTree = "<group>"; };
+		11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientTabBar.storyboard; sourceTree = "<group>"; };
+		11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyTabBar.storyboard; sourceTree = "<group>"; };
+		11A676301F5066A200C2DBDF /* ClientTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTabbarViewController.swift; sourceTree = "<group>"; };
+		11A676321F5066B700C2DBDF /* CompanyTabbarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyTabbarViewController.swift; sourceTree = "<group>"; };
+		11A676341F5069C600C2DBDF /* About.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = About.storyboard; sourceTree = "<group>"; };
+		11A676371F5069F500C2DBDF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientProfile.storyboard; sourceTree = "<group>"; };
 		11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
 		51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,11 +85,10 @@
 		11170CCB1F41DFEE008A3F50 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				11A6762A1F50616500C2DBDF /* Company */,
+				11A676291F50615800C2DBDF /* Client */,
 				11170CCC1F41E00F008A3F50 /* Login.storyboard */,
-				11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */,
-				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
-				11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */,
-				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
+				11A676341F5069C600C2DBDF /* About.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -85,6 +96,8 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				11A676361F5069D900C2DBDF /* About */,
+				11A6762F1F50666600C2DBDF /* TabBars */,
 				11EDE8CD1F4C5DAC007020F3 /* Profile */,
 				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
 				119A63531F4B2AD500BE8E32 /* RegisterControllers */,
@@ -127,6 +140,43 @@
 				119A634A1F4B1B4000BE8E32 /* LoginCompanyViewController.swift */,
 			);
 			name = LoginControllers;
+			sourceTree = "<group>";
+		};
+		11A676291F50615800C2DBDF /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */,
+				11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */,
+				11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		11A6762A1F50616500C2DBDF /* Company */ = {
+			isa = PBXGroup;
+			children = (
+				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
+				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
+				11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */,
+			);
+			name = Company;
+			sourceTree = "<group>";
+		};
+		11A6762F1F50666600C2DBDF /* TabBars */ = {
+			isa = PBXGroup;
+			children = (
+				11A676301F5066A200C2DBDF /* ClientTabbarViewController.swift */,
+				11A676321F5066B700C2DBDF /* CompanyTabbarViewController.swift */,
+			);
+			name = TabBars;
+			sourceTree = "<group>";
+		};
+		11A676361F5069D900C2DBDF /* About */ = {
+			isa = PBXGroup;
+			children = (
+				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
+			);
+			name = About;
 			sourceTree = "<group>";
 		};
 		11EDE8CD1F4C5DAC007020F3 /* Profile */ = {
@@ -252,7 +302,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A6762C1F5061D500C2DBDF /* ClientTabBar.storyboard in Resources */,
 				1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */,
+				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
 				E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */,
 				E0B309611F41C2D400666BF4 /* Assets.xcassets in Resources */,
 				1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */,
@@ -260,6 +312,7 @@
 				11EDE8CC1F4C5585007020F3 /* ClientProfile.storyboard in Resources */,
 				11357CEE1F4B07320026AF82 /* RegisterCompany.storyboard in Resources */,
 				11170CCD1F41E00F008A3F50 /* Login.storyboard in Resources */,
+				11A676351F5069C600C2DBDF /* About.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,11 +386,14 @@
 				1126B9551F4C76E900962477 /* CompanyProfileViewController.swift in Sources */,
 				119A63521F4B20CA00BE8E32 /* RegisterCompanyViewController.swift in Sources */,
 				119A63491F4B1B1900BE8E32 /* LoginClientViewController.swift in Sources */,
+				11A676381F5069F500C2DBDF /* AboutViewController.swift in Sources */,
 				11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */,
 				119A63471F4B0FA300BE8E32 /* RegisterClientViewController.swift in Sources */,
 				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
 				11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */,
 				119A634B1F4B1B4000BE8E32 /* LoginCompanyViewController.swift in Sources */,
+				11A676331F5066B700C2DBDF /* CompanyTabbarViewController.swift in Sources */,
+				11A676311F5066A200C2DBDF /* ClientTabbarViewController.swift in Sources */,
 				119A63501F4B1D0E00BE8E32 /* Company.swift in Sources */,
 				E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */,
 				119A634E1F4B1BF600BE8E32 /* Client.swift in Sources */,

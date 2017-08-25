@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="b3C-Ms-UPU">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sobre-->
+        <scene sceneID="LiC-w7-uDI">
+            <objects>
+                <navigationController id="b3C-Ms-UPU" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Sobre" image="ic_info" id="gR4-LS-qd7"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6WA-7N-4WL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9ao-yU-iJd" kind="relationship" relationship="rootViewController" id="l2U-DR-PMS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dn9-Mr-h9i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-354" y="92"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="xY6-gM-K32">
+            <objects>
+                <viewController id="9ao-yU-iJd" customClass="AboutViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CZW-Vs-o2h"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lx1-iS-NMh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FIj-Pf-lJk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="8dN-dI-RH1">
+                                <rect key="frame" x="119" y="96" width="136" height="136"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8dN-dI-RH1" secondAttribute="height" multiplier="1:1" id="HSS-uX-xaw"/>
+                                    <constraint firstAttribute="width" constant="136" id="cSp-jK-LkN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projeto Mão Aberta" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-Vy-5Nz">
+                                <rect key="frame" x="32" y="264" width="311" height="31.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6MA-oj-Z5k" userLabel="githubView">
+                                <rect key="frame" x="16" y="328" width="343" height="54"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Projeto Mão Aberta no Github " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acj-2b-mMY">
+                                        <rect key="frame" x="70" y="14" width="265" height="26"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_github" translatesAutoresizingMaskIntoConstraints="NO" id="EeR-AY-iuF">
+                                        <rect key="frame" x="8" y="6" width="43" height="43"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="EeR-AY-iuF" secondAttribute="height" multiplier="1:1" id="RSx-mb-pK1"/>
+                                            <constraint firstAttribute="width" constant="43" id="xfO-6P-2LS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-gr-Ap2">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="54"/>
+                                        <connections>
+                                            <action selector="didTapGithubButton:" destination="9ao-yU-iJd" eventType="touchUpInside" id="ECx-yp-1Xs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="7fE-gr-Ap2" secondAttribute="trailing" id="0df-sz-kwX"/>
+                                    <constraint firstAttribute="bottom" secondItem="7fE-gr-Ap2" secondAttribute="bottom" id="0qz-iU-h3S"/>
+                                    <constraint firstItem="EeR-AY-iuF" firstAttribute="centerY" secondItem="6MA-oj-Z5k" secondAttribute="centerY" id="1NH-KJ-LoB"/>
+                                    <constraint firstItem="EeR-AY-iuF" firstAttribute="leading" secondItem="6MA-oj-Z5k" secondAttribute="leading" constant="8" id="7ZT-1h-v53"/>
+                                    <constraint firstAttribute="bottom" secondItem="acj-2b-mMY" secondAttribute="bottom" constant="14" id="Lh4-vb-L3O"/>
+                                    <constraint firstItem="acj-2b-mMY" firstAttribute="top" secondItem="6MA-oj-Z5k" secondAttribute="top" constant="14" id="Lqv-bd-m6p"/>
+                                    <constraint firstItem="7fE-gr-Ap2" firstAttribute="top" secondItem="6MA-oj-Z5k" secondAttribute="top" id="NMB-FB-u0C"/>
+                                    <constraint firstItem="7fE-gr-Ap2" firstAttribute="leading" secondItem="6MA-oj-Z5k" secondAttribute="leading" id="kem-A3-dJ2"/>
+                                    <constraint firstItem="EeR-AY-iuF" firstAttribute="top" secondItem="6MA-oj-Z5k" secondAttribute="top" constant="6" id="upD-lg-jlT"/>
+                                    <constraint firstAttribute="trailing" secondItem="acj-2b-mMY" secondAttribute="trailing" constant="8" id="xbg-JN-AOa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.094117647060000004" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="6MA-oj-Z5k" firstAttribute="top" secondItem="rnp-Vy-5Nz" secondAttribute="bottom" constant="32" id="AlA-K3-YGD"/>
+                            <constraint firstItem="rnp-Vy-5Nz" firstAttribute="top" secondItem="8dN-dI-RH1" secondAttribute="bottom" constant="32" id="ClR-aX-Qrk"/>
+                            <constraint firstAttribute="trailing" secondItem="rnp-Vy-5Nz" secondAttribute="trailing" constant="32" id="FdU-fX-g8w"/>
+                            <constraint firstItem="8dN-dI-RH1" firstAttribute="centerX" secondItem="FIj-Pf-lJk" secondAttribute="centerX" id="oSM-mA-TMI"/>
+                            <constraint firstItem="8dN-dI-RH1" firstAttribute="top" secondItem="CZW-Vs-o2h" secondAttribute="bottom" constant="32" id="q4p-4j-ZZX"/>
+                            <constraint firstAttribute="trailing" secondItem="6MA-oj-Z5k" secondAttribute="trailing" constant="16" id="q8W-SI-AKl"/>
+                            <constraint firstItem="rnp-Vy-5Nz" firstAttribute="leading" secondItem="FIj-Pf-lJk" secondAttribute="leading" constant="32" id="wNC-Ig-16H"/>
+                            <constraint firstItem="6MA-oj-Z5k" firstAttribute="leading" secondItem="FIj-Pf-lJk" secondAttribute="leading" constant="16" id="z4c-Mu-9lS"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Enf-iB-8XS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mgG-4r-f6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536.79999999999995" y="90.404797601199405"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_github" width="768" height="768"/>
+        <image name="ic_info" width="24" height="24"/>
+        <image name="logo_mao_aberta" width="383" height="393"/>
+    </resources>
+</document>
