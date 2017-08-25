@@ -10,6 +10,7 @@
 		11170CCD1F41E00F008A3F50 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11170CCC1F41E00F008A3F50 /* Login.storyboard */; };
 		11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */; };
 		11170CD61F41E7A9008A3F50 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11170CD51F41E7A9008A3F50 /* Constants.swift */; };
+		1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1125C2A21F5083B3003AF453 /* Assets.xcassets */; };
 		1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1126B9521F4C74E400962477 /* CompanyProfile.storyboard */; };
 		1126B9551F4C76E900962477 /* CompanyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */; };
 		11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */; };
@@ -32,7 +33,6 @@
 		3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */; };
 		E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A7461A1F4A544700FBC21A /* AppUtils.swift */; };
 		E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B309591F41C2D400666BF4 /* AppDelegate.swift */; };
-		E0B309611F41C2D400666BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0B309601F41C2D400666BF4 /* Assets.xcassets */; };
 		E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B309621F41C2D400666BF4 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +40,7 @@
 		11170CCC1F41E00F008A3F50 /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainLoginViewController.swift; sourceTree = "<group>"; };
 		11170CD51F41E7A9008A3F50 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		1125C2A21F5083B3003AF453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1126B9521F4C74E400962477 /* CompanyProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompanyProfile.storyboard; sourceTree = "<group>"; };
 		1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyProfileViewController.swift; sourceTree = "<group>"; };
 		11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterClient.storyboard; sourceTree = "<group>"; };
@@ -65,7 +66,6 @@
 		E0A7461A1F4A544700FBC21A /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		E0B309561F41C2D400666BF4 /* ProjetoMaoAberta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoMaoAberta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B309591F41C2D400666BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E0B309601F41C2D400666BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E0B309631F41C2D400666BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0B309651F41C2D400666BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -223,7 +223,7 @@
 				11170CCE1F41E03A008A3F50 /* Controllers */,
 				11170CCB1F41DFEE008A3F50 /* UI */,
 				E0B309591F41C2D400666BF4 /* AppDelegate.swift */,
-				E0B309601F41C2D400666BF4 /* Assets.xcassets */,
+				1125C2A21F5083B3003AF453 /* Assets.xcassets */,
 				E0B309621F41C2D400666BF4 /* LaunchScreen.storyboard */,
 				E0B309651F41C2D400666BF4 /* Info.plist */,
 				1174E4531F41DBB20029921F /* GoogleService-Info.plist */,
@@ -304,9 +304,9 @@
 			files = (
 				11A6762C1F5061D500C2DBDF /* ClientTabBar.storyboard in Resources */,
 				1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */,
+				1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */,
 				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
 				E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */,
-				E0B309611F41C2D400666BF4 /* Assets.xcassets in Resources */,
 				1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */,
 				11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */,
 				11EDE8CC1F4C5585007020F3 /* ClientProfile.storyboard in Resources */,

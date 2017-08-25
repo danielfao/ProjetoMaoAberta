@@ -69,23 +69,13 @@
                                             <constraint firstAttribute="width" constant="43" id="xfO-6P-2LS"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7fE-gr-Ap2">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="54"/>
-                                        <connections>
-                                            <action selector="didTapGithubButton:" destination="9ao-yU-iJd" eventType="touchUpInside" id="ECx-yp-1Xs"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="7fE-gr-Ap2" secondAttribute="trailing" id="0df-sz-kwX"/>
-                                    <constraint firstAttribute="bottom" secondItem="7fE-gr-Ap2" secondAttribute="bottom" id="0qz-iU-h3S"/>
                                     <constraint firstItem="EeR-AY-iuF" firstAttribute="centerY" secondItem="6MA-oj-Z5k" secondAttribute="centerY" id="1NH-KJ-LoB"/>
                                     <constraint firstItem="EeR-AY-iuF" firstAttribute="leading" secondItem="6MA-oj-Z5k" secondAttribute="leading" constant="8" id="7ZT-1h-v53"/>
                                     <constraint firstAttribute="bottom" secondItem="acj-2b-mMY" secondAttribute="bottom" constant="14" id="Lh4-vb-L3O"/>
                                     <constraint firstItem="acj-2b-mMY" firstAttribute="top" secondItem="6MA-oj-Z5k" secondAttribute="top" constant="14" id="Lqv-bd-m6p"/>
-                                    <constraint firstItem="7fE-gr-Ap2" firstAttribute="top" secondItem="6MA-oj-Z5k" secondAttribute="top" id="NMB-FB-u0C"/>
-                                    <constraint firstItem="7fE-gr-Ap2" firstAttribute="leading" secondItem="6MA-oj-Z5k" secondAttribute="leading" id="kem-A3-dJ2"/>
                                     <constraint firstItem="EeR-AY-iuF" firstAttribute="top" secondItem="6MA-oj-Z5k" secondAttribute="top" constant="6" id="upD-lg-jlT"/>
                                     <constraint firstAttribute="trailing" secondItem="acj-2b-mMY" secondAttribute="trailing" constant="8" id="xbg-JN-AOa"/>
                                 </constraints>
@@ -109,6 +99,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Enf-iB-8XS"/>
+                    <connections>
+                        <outlet property="githubImage" destination="EeR-AY-iuF" id="EO9-FE-WIn"/>
+                        <outlet property="githubView" destination="6MA-oj-Z5k" id="bd0-ZX-ykP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mgG-4r-f6m" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

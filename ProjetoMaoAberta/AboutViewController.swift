@@ -10,7 +10,11 @@ import UIKit
 
 class AboutViewController: UIViewController {
 
-    //
+    //MARK: - IBOutlets
+    @IBOutlet weak var githubView: UIView!
+    @IBOutlet weak var githubImage: UIImageView!
+    
+    //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,27 +23,20 @@ class AboutViewController: UIViewController {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
         //Logout
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sair", style: .plain, target: self, action: nil)    }
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sair", style: .plain, target: self, action: nil)
+        githubImage.tintColor = UIColor.white
+    
+        let tap = UITapGestureRecognizer(target: self, action: #selector(AboutViewController.didTapGithubButton))
+        githubView.isUserInteractionEnabled = true
+        githubView.addGestureRecognizer(tap)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    //MARK: IBAction
-    @IBAction func didTapGithubButton(_ sender: Any) {
+    func didTapGithubButton() {
         UIApplication.shared.open(URL(string: "https://github.com/danielfao/ProjetoMaoAberta")!, options: [:], completionHandler: nil)
     }
-    
 }
