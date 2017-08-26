@@ -59,5 +59,18 @@ class RegisterClientViewController: UIViewController {
     
     //MARK: - IBActions
     @IBAction func didTapRegisterButton(_ sender: Any) {
+        let name = nameTextView.text
+        let email = emailTextView.text
+        let phoneNumber = phoneNumberTextView.text
+        let password = passwordTextView.text
+        let confirmPassword = confirmPasswordTextView.text
+        
+        if (name?.isEmpty)! || (email?.isEmpty)! || (phoneNumber?.isEmpty)! || (password?.isEmpty)! || (confirmPassword?.isEmpty)! {
+            let alert = UIAlertController(title: title, message: "Por favor, preencher todos os campos", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }

@@ -62,6 +62,23 @@ class RegisterCompanyViewController: UIViewController {
 
     //MARK: - IBActions
     @IBAction func didTapRegisterButton(_ sender: Any) {
+        let name = realCompanyNameTextField.text
+        let nickName = nickNameTextField.text
+        let cnpj = CNPJTextField.text
+        let responsibleName = responsibleNameTextField.text
+        let email = emailTextField.text
+        let phoneNumber = phoneNumberTextField.text
+        let password = passwordTextField.text
+        let confirmPassword = confirmPasswordTextField.text
+        
+        if (name?.isEmpty)! || (nickName?.isEmpty)! || (cnpj?.isEmpty)! || (responsibleName?.isEmpty)! || (email?.isEmpty)! || (phoneNumber?.isEmpty)! || (password?.isEmpty)! || (confirmPassword?.isEmpty)! {
+            let alert = UIAlertController(title: title, message: "Por favor, preencher todos os campos", preferredStyle: UIAlertControllerStyle.alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            self.present(alert, animated: true, completion: nil)
+        }
+
     }
 
 }

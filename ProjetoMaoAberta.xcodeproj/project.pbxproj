@@ -101,8 +101,6 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				1125C2A61F508631003AF453 /* ForgotPassword */,
-				11A676361F5069D900C2DBDF /* About */,
 				11A6762F1F50666600C2DBDF /* TabBars */,
 				11EDE8CD1F4C5DAC007020F3 /* Profile */,
 				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
@@ -118,14 +116,6 @@
 				E0A7461A1F4A544700FBC21A /* AppUtils.swift */,
 			);
 			name = Utils;
-			sourceTree = "<group>";
-		};
-		1125C2A61F508631003AF453 /* ForgotPassword */ = {
-			isa = PBXGroup;
-			children = (
-				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
-			);
-			name = ForgotPassword;
 			sourceTree = "<group>";
 		};
 		119A634C1F4B1BDE00BE8E32 /* Model */ = {
@@ -185,14 +175,6 @@
 			name = TabBars;
 			sourceTree = "<group>";
 		};
-		11A676361F5069D900C2DBDF /* About */ = {
-			isa = PBXGroup;
-			children = (
-				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
-			);
-			name = About;
-			sourceTree = "<group>";
-		};
 		11EDE8CD1F4C5DAC007020F3 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,6 +217,8 @@
 				119A634C1F4B1BDE00BE8E32 /* Model */,
 				11170CD11F41E6D6008A3F50 /* Utils */,
 				11170CCE1F41E03A008A3F50 /* Controllers */,
+				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
+				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
 				11170CCB1F41DFEE008A3F50 /* UI */,
 				E0B309591F41C2D400666BF4 /* AppDelegate.swift */,
 				1125C2A21F5083B3003AF453 /* Assets.xcassets */,
