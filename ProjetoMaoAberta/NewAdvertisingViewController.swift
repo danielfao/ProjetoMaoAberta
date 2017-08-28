@@ -62,7 +62,7 @@ class NewAdvertisingViewController: UIViewController {
     
     func didTapDoneToBeginDateButton() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
+        dateFormatter.dateStyle = .medium
         dateFormatter.locale = NSLocale.init(localeIdentifier: "pt_BR") as Locale!
         dateFormatter.timeStyle = .none
         
@@ -93,7 +93,7 @@ class NewAdvertisingViewController: UIViewController {
     
     func didTapDoneToEndDateButton() {
         let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .long
+        dateFormatter.dateStyle = .medium
         dateFormatter.locale = NSLocale.init(localeIdentifier: "pt_BR") as Locale!
         dateFormatter.timeStyle = .none
         

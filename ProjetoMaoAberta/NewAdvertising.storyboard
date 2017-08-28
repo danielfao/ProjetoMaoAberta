@@ -42,7 +42,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yas-L5-P6O" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="715"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="637"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novo Anúncio" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-1Z-1m1">
                                                 <rect key="frame" x="32" y="32" width="311" height="35"/>
@@ -86,11 +86,21 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWh-0D-fv3" userLabel="Begin Datepicker">
+                                                        <rect key="frame" x="116" y="12" width="187" height="30"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="XWh-0D-fv3" firstAttribute="top" secondItem="JuL-QS-15j" secondAttribute="top" constant="12" id="0dE-Ew-yz4"/>
+                                                    <constraint firstAttribute="bottom" secondItem="XWh-0D-fv3" secondAttribute="bottom" constant="12" id="3x7-PR-QZj"/>
                                                     <constraint firstItem="jcv-DX-0c2" firstAttribute="leading" secondItem="zSR-3i-0PN" secondAttribute="trailing" constant="8" id="KUl-1l-BE9"/>
                                                     <constraint firstItem="zSR-3i-0PN" firstAttribute="leading" secondItem="JuL-QS-15j" secondAttribute="leading" constant="8" id="S3Y-UN-nss"/>
+                                                    <constraint firstItem="XWh-0D-fv3" firstAttribute="leading" secondItem="jcv-DX-0c2" secondAttribute="trailing" constant="8" id="WQW-ow-47h"/>
+                                                    <constraint firstAttribute="trailing" secondItem="XWh-0D-fv3" secondAttribute="trailing" constant="8" id="bqu-aC-kYt"/>
                                                     <constraint firstItem="zSR-3i-0PN" firstAttribute="top" secondItem="JuL-QS-15j" secondAttribute="top" constant="15" id="fBF-vC-Sm0"/>
                                                     <constraint firstItem="jcv-DX-0c2" firstAttribute="leading" secondItem="zSR-3i-0PN" secondAttribute="trailing" constant="8" id="lgt-vx-fpe"/>
                                                     <constraint firstAttribute="bottom" secondItem="zSR-3i-0PN" secondAttribute="bottom" constant="15" id="mzR-hD-Ds1"/>
@@ -103,14 +113,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecione a data de início" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XWh-0D-fv3" userLabel="Begin Datepicker">
-                                                <rect key="frame" x="32" y="455" width="311" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                            </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wSf-Il-Qdq" userLabel="End Data View">
-                                                <rect key="frame" x="32" y="493" width="311" height="54"/>
+                                                <rect key="frame" x="32" y="455" width="311" height="54"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_date_range" translatesAutoresizingMaskIntoConstraints="NO" id="HmE-C7-1NL">
                                                         <rect key="frame" x="8" y="15" width="24" height="24"/>
@@ -125,15 +129,25 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-m4-ikL" userLabel="End Datepicker">
+                                                        <rect key="frame" x="116" y="12" width="187" height="30"/>
+                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                                                    </textField>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
+                                                    <constraint firstItem="AMc-m4-ikL" firstAttribute="top" secondItem="wSf-Il-Qdq" secondAttribute="top" constant="12" id="2ab-WI-3fY"/>
                                                     <constraint firstItem="HmE-C7-1NL" firstAttribute="top" secondItem="wSf-Il-Qdq" secondAttribute="top" constant="15" id="7uW-ah-Qzh"/>
+                                                    <constraint firstItem="AMc-m4-ikL" firstAttribute="leading" secondItem="sFJ-Yu-PwJ" secondAttribute="trailing" constant="19" id="9MM-Ne-kDI"/>
                                                     <constraint firstAttribute="bottom" secondItem="HmE-C7-1NL" secondAttribute="bottom" constant="15" id="Igd-VU-ivu"/>
                                                     <constraint firstItem="sFJ-Yu-PwJ" firstAttribute="leading" secondItem="HmE-C7-1NL" secondAttribute="trailing" constant="8" id="J1q-gq-UuA"/>
                                                     <constraint firstItem="sFJ-Yu-PwJ" firstAttribute="top" secondItem="wSf-Il-Qdq" secondAttribute="top" constant="14" id="Odm-DQ-lHH"/>
                                                     <constraint firstItem="sFJ-Yu-PwJ" firstAttribute="leading" secondItem="HmE-C7-1NL" secondAttribute="trailing" constant="8" id="cCV-nK-d8d"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AMc-m4-ikL" secondAttribute="bottom" constant="12" id="kxF-kR-dbp"/>
                                                     <constraint firstItem="HmE-C7-1NL" firstAttribute="leading" secondItem="wSf-Il-Qdq" secondAttribute="leading" constant="8" id="oCN-MW-IL6"/>
+                                                    <constraint firstAttribute="trailing" secondItem="AMc-m4-ikL" secondAttribute="trailing" constant="8" id="oQA-q6-sCu"/>
                                                     <constraint firstAttribute="bottom" secondItem="sFJ-Yu-PwJ" secondAttribute="bottom" constant="14" id="ofF-P3-1mH"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -142,14 +156,8 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Selecione a data final" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-m4-ikL" userLabel="End Datepicker">
-                                                <rect key="frame" x="32" y="555" width="311" height="30"/>
-                                                <nil key="textColor"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                                            </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrj-dN-OiV" userLabel="Save">
-                                                <rect key="frame" x="32" y="633" width="311" height="50"/>
+                                                <rect key="frame" x="32" y="555" width="311" height="50"/>
                                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="iQx-mq-bcj"/>
@@ -178,25 +186,17 @@
                                             <constraint firstItem="JuL-QS-15j" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="JCD-gj-FYI"/>
                                             <constraint firstItem="wSf-Il-Qdq" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="LbG-cu-R46"/>
                                             <constraint firstItem="JuL-QS-15j" firstAttribute="top" secondItem="bRJ-tl-VtU" secondAttribute="bottom" constant="8" id="Nmq-dj-ekb"/>
-                                            <constraint firstItem="XWh-0D-fv3" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="PQu-n7-YD4"/>
                                             <constraint firstAttribute="trailing" secondItem="hrj-dN-OiV" secondAttribute="trailing" constant="32" id="Pi5-cr-wmS"/>
-                                            <constraint firstAttribute="trailing" secondItem="AMc-m4-ikL" secondAttribute="trailing" constant="32" id="Q8s-Bs-Gju"/>
-                                            <constraint firstItem="XWh-0D-fv3" firstAttribute="top" secondItem="JuL-QS-15j" secondAttribute="bottom" constant="8" id="U1b-U7-IPW"/>
                                             <constraint firstAttribute="trailing" secondItem="YKz-nm-Ri8" secondAttribute="trailing" constant="32" id="Ueq-72-5yG"/>
                                             <constraint firstItem="bRJ-tl-VtU" firstAttribute="top" secondItem="YKz-nm-Ri8" secondAttribute="bottom" constant="8" id="Xz6-wj-FOj"/>
                                             <constraint firstItem="hrj-dN-OiV" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="YEj-FZ-lVM"/>
                                             <constraint firstAttribute="trailing" secondItem="wSf-Il-Qdq" secondAttribute="trailing" constant="32" id="Yey-AL-bYY"/>
                                             <constraint firstAttribute="bottom" secondItem="hrj-dN-OiV" secondAttribute="bottom" constant="32" id="Yx2-LT-8xb"/>
-                                            <constraint firstAttribute="trailing" secondItem="XWh-0D-fv3" secondAttribute="trailing" constant="32" id="Yyt-kc-qNt"/>
-                                            <constraint firstItem="AMc-m4-ikL" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="dVk-1M-DME"/>
-                                            <constraint firstAttribute="trailing" secondItem="JuL-QS-15j" secondAttribute="trailing" constant="32" id="dxR-Wl-ZRS"/>
-                                            <constraint firstItem="AMc-m4-ikL" firstAttribute="top" secondItem="wSf-Il-Qdq" secondAttribute="bottom" constant="8" id="eLb-sF-Q4Y"/>
-                                            <constraint firstItem="hrj-dN-OiV" firstAttribute="top" secondItem="AMc-m4-ikL" secondAttribute="bottom" constant="48" id="eQg-wR-L5d"/>
+                                            <constraint firstItem="hrj-dN-OiV" firstAttribute="top" secondItem="wSf-Il-Qdq" secondAttribute="bottom" constant="46" id="bnw-Hf-on7"/>
                                             <constraint firstItem="fFW-1Z-1m1" firstAttribute="top" secondItem="Yas-L5-P6O" secondAttribute="top" constant="32" id="mZk-e8-g1g"/>
                                             <constraint firstItem="fFW-1Z-1m1" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="nzm-Yg-1z6"/>
+                                            <constraint firstItem="wSf-Il-Qdq" firstAttribute="top" secondItem="JuL-QS-15j" secondAttribute="bottom" constant="8" id="rij-Yi-Pgh"/>
                                             <constraint firstAttribute="trailing" secondItem="JuL-QS-15j" secondAttribute="trailing" constant="32" id="uhX-Oz-D8G"/>
-                                            <constraint firstItem="wSf-Il-Qdq" firstAttribute="top" secondItem="XWh-0D-fv3" secondAttribute="bottom" constant="8" id="xni-c0-a7S"/>
-                                            <constraint firstItem="JuL-QS-15j" firstAttribute="leading" secondItem="Yas-L5-P6O" secondAttribute="leading" constant="32" id="yFQ-yu-SYh"/>
                                         </constraints>
                                     </view>
                                 </subviews>
