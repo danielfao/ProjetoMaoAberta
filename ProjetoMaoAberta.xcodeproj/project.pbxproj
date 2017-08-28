@@ -18,6 +18,8 @@
 		11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */; };
 		11357CEE1F4B07320026AF82 /* RegisterCompany.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */; };
 		1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1174E4531F41DBB20029921F /* GoogleService-Info.plist */; };
+		118209881F544718005116CE /* NewAdvertising.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118209871F544718005116CE /* NewAdvertising.storyboard */; };
+		1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182098A1F544756005116CE /* NewAdvertisingViewController.swift */; };
 		119A63471F4B0FA300BE8E32 /* RegisterClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A63461F4B0FA300BE8E32 /* RegisterClientViewController.swift */; };
 		119A63491F4B1B1900BE8E32 /* LoginClientViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A63481F4B1B1900BE8E32 /* LoginClientViewController.swift */; };
 		119A634B1F4B1B4000BE8E32 /* LoginCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119A634A1F4B1B4000BE8E32 /* LoginCompanyViewController.swift */; };
@@ -50,6 +52,8 @@
 		11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterClient.storyboard; sourceTree = "<group>"; };
 		11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterCompany.storyboard; sourceTree = "<group>"; };
 		1174E4531F41DBB20029921F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		118209871F544718005116CE /* NewAdvertising.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewAdvertising.storyboard; sourceTree = "<group>"; };
+		1182098A1F544756005116CE /* NewAdvertisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAdvertisingViewController.swift; sourceTree = "<group>"; };
 		119A63461F4B0FA300BE8E32 /* RegisterClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterClientViewController.swift; sourceTree = "<group>"; };
 		119A63481F4B1B1900BE8E32 /* LoginClientViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginClientViewController.swift; sourceTree = "<group>"; };
 		119A634A1F4B1B4000BE8E32 /* LoginCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCompanyViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				118209891F54473F005116CE /* NewAdvertising */,
 				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
 				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
 				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
@@ -118,6 +123,28 @@
 				E0A7461A1F4A544700FBC21A /* AppUtils.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		118209851F544661005116CE /* Tableviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tableviews;
+			sourceTree = "<group>";
+		};
+		118209861F54466C005116CE /* Tableviews */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Tableviews;
+			sourceTree = "<group>";
+		};
+		118209891F54473F005116CE /* NewAdvertising */ = {
+			isa = PBXGroup;
+			children = (
+				1182098A1F544756005116CE /* NewAdvertisingViewController.swift */,
+			);
+			name = NewAdvertising;
 			sourceTree = "<group>";
 		};
 		119A634C1F4B1BDE00BE8E32 /* Model */ = {
@@ -151,6 +178,7 @@
 		11A676291F50615800C2DBDF /* Client */ = {
 			isa = PBXGroup;
 			children = (
+				118209861F54466C005116CE /* Tableviews */,
 				11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */,
 				11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */,
 				11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */,
@@ -161,9 +189,11 @@
 		11A6762A1F50616500C2DBDF /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				118209851F544661005116CE /* Tableviews */,
 				11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */,
 				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
 				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
+				118209871F544718005116CE /* NewAdvertising.storyboard */,
 			);
 			name = Company;
 			sourceTree = "<group>";
@@ -305,6 +335,7 @@
 				1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */,
 				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
 				1125C2A51F508617003AF453 /* ForgotPassword.storyboard in Resources */,
+				118209881F544718005116CE /* NewAdvertising.storyboard in Resources */,
 				E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */,
 				1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */,
 				11357CEC1F4B07140026AF82 /* RegisterClient.storyboard in Resources */,
@@ -391,6 +422,7 @@
 				119A63471F4B0FA300BE8E32 /* RegisterClientViewController.swift in Sources */,
 				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
 				11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */,
+				1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */,
 				119A634B1F4B1B4000BE8E32 /* LoginCompanyViewController.swift in Sources */,
 				11A676331F5066B700C2DBDF /* CompanyTabbarViewController.swift in Sources */,
 				11A676311F5066A200C2DBDF /* ClientTabbarViewController.swift in Sources */,
@@ -515,11 +547,13 @@
 			baseConfigurationReference = 7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W5849F638E;
 				INFOPLIST_FILE = ProjetoMaoAberta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danieloliveira.ProjetoMaoAberta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -530,11 +564,13 @@
 			baseConfigurationReference = 51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = W5849F638E;
 				INFOPLIST_FILE = ProjetoMaoAberta/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.danieloliveira.ProjetoMaoAberta;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
