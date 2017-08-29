@@ -18,14 +18,30 @@ extension UIViewController {
     func dismissKeyboard() {
         view.endEditing(true)
     }
-}
-
-func setProfileCircleImageView(image: UIImageView) -> UIImageView {
-    image.layer.cornerRadius = image.frame.size.width / 2
-    image.clipsToBounds = true
     
-    image.layer.borderWidth = 3.0
-    image.layer.borderColor = UIColor.white.cgColor
+    func showKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+    }
     
-    return image
+    func hideKeyboard() {
+        NotificationCenter.default.addObserver(self, selector: #selector(UIViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    //Slides the view up when the keyboard is shown
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    //Slides the view back when keyboard is hidden
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
+    }
 }
