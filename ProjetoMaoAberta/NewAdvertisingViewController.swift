@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewAdvertisingViewController: UIViewController {
+class NewAdvertisingViewController: UIViewController, UITextViewDelegate {
     
     //MARK: - IBOutlets
     @IBOutlet weak var titleTextField: UITextField!
@@ -99,6 +99,22 @@ class NewAdvertisingViewController: UIViewController {
         
         endDatePickerTextField.text = dateFormatter.string(from: endDatePicker.date)
         self.view.endEditing(true)
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if (textView.text == "Descrição") {
+            textView.text = ""
+        }
+        textView.textColor = UIColor.black
+        textView.becomeFirstResponder()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if (textView.text == "") {
+            textView.text = "Descrição"
+            textView.textColor = Colors.Placeholder
+        }
+        textView.resignFirstResponder()
     }
     
     //MARK: - IBActions

@@ -15,6 +15,7 @@ struct Colors {
     
     static let Background : UIColor! = UIColor(red: 24/255, green: 188/255, blue: 156/255, alpha: 1)
     static let Button : UIColor! = UIColor(red: 44/255, green: 62/255, blue: 80/255, alpha: 1)
+    static let Placeholder : UIColor! = UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1)
 }
 
 //MARK: - Storyboards

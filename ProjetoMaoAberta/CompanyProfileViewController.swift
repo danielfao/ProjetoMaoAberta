@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompanyProfileViewController: UIViewController {
+class CompanyProfileViewController: UIViewController, UITextViewDelegate {
     
     //MARK: - IBOutlets
     @IBOutlet weak var profileImageView: UIImageView!
@@ -40,6 +40,22 @@ class CompanyProfileViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if (textView.text == "Descrição") {
+            textView.text = ""
+        }
+        textView.textColor = UIColor.black
+        textView.becomeFirstResponder()
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if (textView.text == "") {
+            textView.text = "Descrição"
+            textView.textColor = Colors.Placeholder
+        }
+        textView.resignFirstResponder()
     }
     
     //MARK: - IBActions
