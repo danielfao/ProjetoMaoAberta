@@ -19,6 +19,7 @@
 		11357CEE1F4B07320026AF82 /* RegisterCompany.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */; };
 		1138FA4D1F559DB300536740 /* CompaniesListTableview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1138FA4C1F559DB300536740 /* CompaniesListTableview.storyboard */; };
 		1138FA501F559E1100536740 /* CompaniesListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1138FA4F1F559E1100536740 /* CompaniesListTableViewController.swift */; };
+		113A75E91F57245B00FD9756 /* CompaniesListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113A75E81F57245B00FD9756 /* CompaniesListTableViewCell.swift */; };
 		1174E4541F41DBB20029921F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1174E4531F41DBB20029921F /* GoogleService-Info.plist */; };
 		118209881F544718005116CE /* NewAdvertising.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118209871F544718005116CE /* NewAdvertising.storyboard */; };
 		1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1182098A1F544756005116CE /* NewAdvertisingViewController.swift */; };
@@ -55,6 +56,7 @@
 		11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RegisterCompany.storyboard; sourceTree = "<group>"; };
 		1138FA4C1F559DB300536740 /* CompaniesListTableview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CompaniesListTableview.storyboard; sourceTree = "<group>"; };
 		1138FA4F1F559E1100536740 /* CompaniesListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesListTableViewController.swift; sourceTree = "<group>"; };
+		113A75E81F57245B00FD9756 /* CompaniesListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompaniesListTableViewCell.swift; sourceTree = "<group>"; };
 		1174E4531F41DBB20029921F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		118209871F544718005116CE /* NewAdvertising.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = NewAdvertising.storyboard; sourceTree = "<group>"; };
 		1182098A1F544756005116CE /* NewAdvertisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAdvertisingViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				1138FA4F1F559E1100536740 /* CompaniesListTableViewController.swift */,
+				113A75E81F57245B00FD9756 /* CompaniesListTableViewCell.swift */,
 			);
 			name = CompaniesList;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */,
 				119A63471F4B0FA300BE8E32 /* RegisterClientViewController.swift in Sources */,
 				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
+				113A75E91F57245B00FD9756 /* CompaniesListTableViewCell.swift in Sources */,
 				11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */,
 				1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */,
 				119A634B1F4B1B4000BE8E32 /* LoginCompanyViewController.swift in Sources */,

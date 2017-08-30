@@ -10,14 +10,21 @@ import UIKit
 
 class CompaniesListTableViewController: UITableViewController {
 
+    //MARK: - Variables
+    var profileImage: [Any]!
+    var advertisingTitleLabel: [String]!
+    var expireDateLabel: [String]!
+    
+    //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        advertisingTitleLabel = ["Precisamos de Fraldas", "Precisamos de Alimentos não pereciveis", "Precisa-se de Pessoas", "Precisa-se de Ajuda", "Precisamos de amor", "Procura-se médicos"]
+        expireDateLabel = ["08/11/2017", "08/09/2017", "08/10/2017", "08/09/2017", "24/12/2017", "11/01/2018"]
+        profileImage = ["08/11/2017", "08/09/2017", "08/10/2017", "08/09/2017", "24/12/2017", "11/01/2018"]
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,24 +35,20 @@ class CompaniesListTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return advertisingTitleLabel.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         // Configure the cell...
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
