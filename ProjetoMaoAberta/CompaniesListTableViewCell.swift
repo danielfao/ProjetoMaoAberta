@@ -14,12 +14,16 @@ class CompaniesListTableViewCell: UITableViewCell {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var advertisingTitleLabel: UILabel!
     @IBOutlet weak var expireDateLabel: UILabel!
+    @IBOutlet weak var dateIcon: UIImageView!
+    @IBOutlet weak var arrowIcon: UIImageView!
     
     
     //MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        dateIcon.tintColor = Colors.Placeholder
+        arrowIcon.tintColor = Colors.Placeholder
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
