@@ -9,19 +9,13 @@
 import Foundation
 
 class Client {
-    var id: String?
+    var id: String
     var name: String?
     var email: String?
     var phoneNumber: Int?
     var profileImageUrl: String?
     
-    init(name: String, id: String, email: String, phoneNumber: Int, profileImageUrl: String) {
-        
-        self.name = name
+    init(id: String) {
         self.id = id
-        self.email = email
-        self.phoneNumber = phoneNumber
-        self.profileImageUrl = profileImageUrl
     }
-
 }

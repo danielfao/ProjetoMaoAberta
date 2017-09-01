@@ -9,7 +9,7 @@
 import Foundation
 
 class Company {
-    var id: String?
+    var id: String
     var realCompanyName: String?
     var nickName: String?
     var CNPJ: Int?
@@ -18,15 +18,7 @@ class Company {
     var phoneNumber: Int?
     var profileImageUrl: String?
     
-    init(id: String, realCompanyName: String, nickName:String, CNPJ: Int, responsibleName: String, email: String, phoneNumber: Int, profileImageUrl: String) {
-        
+    init(id: String) {
         self.id = id
-        self.realCompanyName = realCompanyName
-        self.nickName = nickName
-        self.CNPJ = CNPJ
-        self.responsibleName = responsibleName
-        self.email = email
-        self.phoneNumber = phoneNumber
-        self.profileImageUrl = profileImageUrl
     }
 }

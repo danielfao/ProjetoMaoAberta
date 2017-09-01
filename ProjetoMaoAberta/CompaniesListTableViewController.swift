@@ -11,20 +11,13 @@ import UIKit
 class CompaniesListTableViewController: UITableViewController {
 
     //MARK: - Variables
-    var profileImage: [Any]!
-    var advertisingTitleLabel: [String]!
-    var expireDateLabel: [String]!
+    var companies: [Company] = []
+    var advertisings: [Advertising] = []
     
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        advertisingTitleLabel = ["Precisamos de Fraldas", "Precisamos de Alimentos não pereciveis", "Precisa-se de Pessoas", "Precisa-se de Ajuda", "Precisamos de amor", "Procura-se médicos"]
-        expireDateLabel = ["08/11/2017", "08/09/2017", "08/10/2017", "08/09/2017", "24/12/2017", "11/01/2018"]
-        profileImage = ["08/11/2017", "08/09/2017", "08/10/2017", "08/09/2017", "24/12/2017", "11/01/2018"]
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+                
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,11 +32,12 @@ class CompaniesListTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return advertisingTitleLabel.count
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        
 
         
         return cell
