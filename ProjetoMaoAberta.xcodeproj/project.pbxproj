@@ -113,14 +113,14 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
-				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
 				1138FA4E1F559DDD00536740 /* CompaniesList */,
 				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
 				118209891F54473F005116CE /* NewAdvertising */,
 				11EDE8CD1F4C5DAC007020F3 /* Profile */,
 				119A63531F4B2AD500BE8E32 /* RegisterControllers */,
 				11A6762F1F50666600C2DBDF /* TabBars */,
+				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
+				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -266,15 +266,15 @@
 		E0B309581F41C2D400666BF4 /* ProjetoMaoAberta */ = {
 			isa = PBXGroup;
 			children = (
+				119A634C1F4B1BDE00BE8E32 /* Model */,
+				11170CCE1F41E03A008A3F50 /* Controllers */,
+				11170CCB1F41DFEE008A3F50 /* UI */,
+				11170CD11F41E6D6008A3F50 /* Utils */,
 				1174E4531F41DBB20029921F /* GoogleService-Info.plist */,
 				E0B309651F41C2D400666BF4 /* Info.plist */,
 				E0B309591F41C2D400666BF4 /* AppDelegate.swift */,
 				1125C2A21F5083B3003AF453 /* Assets.xcassets */,
 				E0B309621F41C2D400666BF4 /* LaunchScreen.storyboard */,
-				119A634C1F4B1BDE00BE8E32 /* Model */,
-				11170CCE1F41E03A008A3F50 /* Controllers */,
-				11170CCB1F41DFEE008A3F50 /* UI */,
-				11170CD11F41E6D6008A3F50 /* Utils */,
 			);
 			path = ProjetoMaoAberta;
 			sourceTree = "<group>";

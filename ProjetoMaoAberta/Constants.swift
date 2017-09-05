@@ -20,7 +20,6 @@ struct Colors {
 
 //MARK: - Storyboards
 struct Storyboards {
-    
     private init() {}
     
     static let MainLoginStoryboard : String! = "MainLogin"
@@ -32,7 +31,6 @@ struct Storyboards {
 
 //MARK: - Storyboards
 struct ViewControllers {
-    
     private init() {}
     
     static let MainLoginViewController : String! = "mainLoginvViewController"
@@ -52,4 +50,26 @@ struct Segues {
     static let LoginCompanyToRegisterSegue : String! = "LoginCompanyToRegisterSegue"
     static let TabBarClientToLogin : String! = "TabBarClientToLogin"
     static let TabBarCompanyToLogin : String! = "TabBarCompanyToLogin"
+}
+
+//MARK: - Firebase Errors
+struct FirebaseErrorType {
+    private init() {}
+    
+    static let InvalidEmail : String! = "ERROR_INVALID_EMAIL"
+    static let WeakPassword : String! = "ERROR_WEAK_PASSWORD"
+    static let EmailAlreadyUsed : String! = "ERROR_EMAIL_ALREADY_IN_USE"
+}
+
+struct ErrorMessages {
+    private init() {}
+
+    static let DefaultError : String! = "Dados digitados estão incorretos.\n Por favor, conferir todos os campos."
+    static let EmptyFields : String! = "Alguns campos não foram preenchidos.\n Por favor, preencher todos os campos"
+    static let PasswordsAndConfirmIncorret : String! = "Senha e Confirmação de senha devem iguais. \n Digite novamente"
+    static let AuthenticationError : String! = "Problema ao realizar autenticação.\n Tente novamente."
+
+    static let InvalidEmail : String! = "E-mail inválido.\n Digite um e-mail válido."
+    static let WeakPassword : String! = "Senha muito fraca.\n A senha deve conter 6 caracteres com letras e números."
+    static let EmailAlreadyUsed : String! = "E-mail já está sendo utilizado.\n Digite outro e-mail válido."
 }

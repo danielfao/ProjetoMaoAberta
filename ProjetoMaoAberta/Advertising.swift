@@ -6,7 +6,7 @@
 //  Copyright © 2017 Daniel Fernandes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Advertising {
     var id: String
@@ -14,6 +14,7 @@ class Advertising {
     var description: String?
     var initialDate: Date?
     var finalDate: Date?
+    var owner: Company!
     
     init(id: String) {
         self.id = id

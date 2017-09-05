@@ -6,17 +6,17 @@
 //  Copyright © 2017 Daniel Fernandes. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class Company {
     var id: String
     var realCompanyName: String?
     var nickName: String?
-    var CNPJ: Int?
+    var cnpj: Int?
     var responsibleName: String?
     var email: String?
     var phoneNumber: Int?
-    var profileImageUrl: String?
+    var profileImageUrl: UIImage?
     
     init(id: String) {
         self.id = id

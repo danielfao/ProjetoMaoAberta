@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class RegisterClientViewController: UIViewController {
     
@@ -20,7 +21,6 @@ class RegisterClientViewController: UIViewController {
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
         
         //Setup navbar and change the back button color
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -32,6 +32,10 @@ class RegisterClientViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         self.showKeyboard()
         self.hideKeyboard()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func didReceiveMemoryWarning() {
@@ -48,11 +52,48 @@ class RegisterClientViewController: UIViewController {
         let confirmPassword = confirmPasswordTextView.text
         
         if (name?.isEmpty)! || (email?.isEmpty)! || (phoneNumber?.isEmpty)! || (password?.isEmpty)! || (confirmPassword?.isEmpty)! {
-            let alert = UIAlertController(title: title, message: "Por favor, preencher todos os campos", preferredStyle: UIAlertControllerStyle.alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
             
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true, completion: nil)
+        } else {
+            //Check if password is equals to confirm password
+            if password != confirmPassword {
+                messageAlert(title: "Dados Incorretos", message: ErrorMessages.PasswordsAndConfirmIncorret )
+            } else {
+                //Firebase Creating new user with email and password
+                let user = Auth.auth()
+                
+                user.createUser(withEmail: email!, password: password!, completion: { (user, error) in
+                    if error == nil {
+                        print("Usuário criado com sucesso!" + String(describing: user?.email))
+                    } else {
+                        let errorRecovered = error! as NSError
+                        
+                        if let errorCode = errorRecovered.userInfo["error_name"] {
+                            let errorText = errorCode as! String
+                            var errorMessage = ""
+                            
+                            switch errorText {
+                            case FirebaseErrorType.InvalidEmail :
+                                errorMessage = ErrorMessages.InvalidEmail
+                                break
+                            
+                            case FirebaseErrorType.WeakPassword :
+                                errorMessage = ErrorMessages.WeakPassword
+                                break
+                                
+                            case FirebaseErrorType.EmailAlreadyUsed :
+                                errorMessage = ErrorMessages.EmailAlreadyUsed
+                                break
+                                
+                            default :
+                                errorMessage = ErrorMessages.DefaultError
+                            }
+                            
+                            self.messageAlert(title: "Dados Inválidos", message: errorMessage)
+                        }
+                    }
+                })
+            }
         }
     }
 }

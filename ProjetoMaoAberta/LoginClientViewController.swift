@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginClientViewController: UIViewController {
 
@@ -30,11 +31,7 @@ class LoginClientViewController: UIViewController {
         let password = passwordTextField.text
         
         if (email?.isEmpty)! || (password?.isEmpty)! {
-            let alert = UIAlertController(title: title, message: "Por favor, preencher todos os campos", preferredStyle: UIAlertControllerStyle.alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true, completion: nil)
+            messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
         } else {
             print("Logar")
         }

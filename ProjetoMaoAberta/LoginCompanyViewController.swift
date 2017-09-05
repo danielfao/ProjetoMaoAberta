@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class LoginCompanyViewController: UIViewController {
 
@@ -30,13 +31,22 @@ class LoginCompanyViewController: UIViewController {
         let password = passwordTextField.text
         
         if (email?.isEmpty)! || (password?.isEmpty)! {
-            let alert = UIAlertController(title: title, message: "Por favor, preencher todos os campos", preferredStyle: UIAlertControllerStyle.alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true, completion: nil)
+            messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
         } else {
-            print("Logar")
+            
+            //Firebase Login with email and password
+            let authentication = Auth.auth()
+            authentication.signIn(withEmail: email!, password: password!, completion: { (user, error) in
+                if error == nil {
+                    if user == nil {
+                        self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
+                    } else {
+                        
+                    }
+                } else {
+                    self.messageAlert(title: "Dados Incorretos", message: ErrorMessages.DefaultError)
+                }
+            })
         }
     }
     
@@ -44,7 +54,6 @@ class LoginCompanyViewController: UIViewController {
         let storyboard = UIStoryboard(name: Storyboards.RegisterCompanyStoryboard, bundle: nil)
         let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterCompanyViewController) as! RegisterCompanyViewController
         navigationController?.pushViewController(registerCompanyViewController, animated: true)
-        
     }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {

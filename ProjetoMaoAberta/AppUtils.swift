@@ -44,4 +44,13 @@ extension UIViewController {
             }
         }
     }
+    
+    //show message alert when something is wrong
+    func messageAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        
+        alert.addAction(cancelAction)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
