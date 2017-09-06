@@ -247,11 +247,20 @@
                         <outlet property="responsibleNameTextField" destination="flY-zR-1aR" id="N26-t1-9sw"/>
                         <outlet property="twitterTextField" destination="IPs-7y-ee3" id="IFy-jg-Ag4"/>
                         <outlet property="websiteTextField" destination="QEQ-n1-2Zu" id="SIg-xG-1iC"/>
+                        <segue destination="C8h-IN-AAY" kind="presentation" identifier="LoginCompanyToCompanyProfileSegue" id="bzu-Rt-xtP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XgD-PA-HgM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576.79999999999995" y="131.33433283358323"/>
+        </scene>
+        <!--CompanyProfile-->
+        <scene sceneID="AiE-1x-QeN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CompanyProfile" id="C8h-IN-AAY" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DNr-rp-twg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1294" y="131"/>
         </scene>
     </scenes>
     <resources>

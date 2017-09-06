@@ -108,6 +108,22 @@
             </objects>
             <point key="canvasLocation" x="597.60000000000002" y="-81.409295352323838"/>
         </scene>
+        <!--CompanyProfile-->
+        <scene sceneID="faj-EB-Xyu">
+            <objects>
+                <viewControllerPlaceholder storyboardName="CompanyProfile" id="BbY-j6-wXU" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fMX-2t-QZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1066" y="851"/>
+        </scene>
+        <!--ClientProfile-->
+        <scene sceneID="Jqb-oM-02X">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClientProfile" id="aAi-9F-Iqr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqC-R1-ZFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="456" y="851"/>
+        </scene>
         <!--Login Client-->
         <scene sceneID="j5s-2r-fbQ">
             <objects>
@@ -200,6 +216,7 @@
                         <outlet property="emailTextField" destination="vcp-yZ-wW1" id="ufo-OZ-WfJ"/>
                         <outlet property="passwordTextField" destination="aGb-HB-iC2" id="jFk-Hc-gLY"/>
                         <segue destination="TEG-yh-JSh" kind="show" identifier="LoginClientToRegisterSegue" id="cFV-3k-WVL"/>
+                        <segue destination="aAi-9F-Iqr" kind="presentation" identifier="LoginClientToClientProfileSegue" id="Nnj-sk-1A9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz0-x2-U73" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -212,7 +229,7 @@
                 <viewControllerPlaceholder storyboardName="RegisterClient" id="TEG-yh-JSh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJT-2S-abU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="851"/>
+            <point key="canvasLocation" x="114" y="851"/>
         </scene>
         <!--Login Company-->
         <scene sceneID="cHd-ci-cTN">
@@ -306,6 +323,7 @@
                         <outlet property="emailTextField" destination="etV-DT-p6b" id="fbo-ko-7P6"/>
                         <outlet property="passwordTextField" destination="DWW-pK-isb" id="olY-uZ-Cgh"/>
                         <segue destination="RwC-xm-7FQ" kind="show" identifier="LoginCompanyToRegisterSegue" id="j25-yG-XYx"/>
+                        <segue destination="BbY-j6-wXU" kind="presentation" identifier="LoginCompanyToCompanyProfileSegue" id="hc8-Rd-Bwr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOd-NS-ek2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -318,7 +336,7 @@
                 <viewControllerPlaceholder storyboardName="RegisterCompany" id="RwC-xm-7FQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zp-ar-uZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="851"/>
+            <point key="canvasLocation" x="758" y="851"/>
         </scene>
     </scenes>
     <resources>

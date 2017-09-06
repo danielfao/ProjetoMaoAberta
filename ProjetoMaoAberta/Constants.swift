@@ -48,6 +48,8 @@ struct Segues {
 
     static let LoginClientToRegisterSegue : String! = "LoginClientToRegisterSegue"
     static let LoginCompanyToRegisterSegue : String! = "LoginCompanyToRegisterSegue"
+    static let LoginCompanyToCompanyProfileSegue : String! = "LoginCompanyToCompanyProfileSegue"
+    static let LoginClientToClientProfileSegue : String! = "LoginClientToClientProfileSegue"
     static let TabBarClientToLogin : String! = "TabBarClientToLogin"
     static let TabBarCompanyToLogin : String! = "TabBarCompanyToLogin"
 }

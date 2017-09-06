@@ -70,7 +70,11 @@ class RegisterCompanyViewController: UIViewController {
                 
                 user.createUser(withEmail: email!, password: password!, completion: { (user, error) in
                     if error == nil {
-                        print("Usuário criado com sucesso!" + String(describing: user?.email))
+                        if user == nil {
+                            self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
+                        } else {
+                            self.performSegue(withIdentifier: Segues.LoginCompanyToCompanyProfileSegue, sender: nil)
+                        }
                     } else {
                         let errorRecovered = error! as NSError
                         

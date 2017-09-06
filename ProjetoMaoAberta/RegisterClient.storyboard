@@ -125,11 +125,20 @@
                         <outlet property="nameTextView" destination="ZCJ-cb-HFg" id="FWG-lg-NG3"/>
                         <outlet property="passwordTextView" destination="BGv-c9-3jM" id="hIu-5b-lKe"/>
                         <outlet property="phoneNumberTextView" destination="7Ln-6S-WDY" id="Blt-Ut-EPp"/>
+                        <segue destination="Pm7-8n-heq" kind="presentation" identifier="LoginClientToClientProfileSegue" id="ANE-sR-ggj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rw2-lC-BHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="397.60000000000002" y="-61.619190404797607"/>
+        </scene>
+        <!--ClientProfile-->
+        <scene sceneID="S5e-Ah-zhI">
+            <objects>
+                <viewControllerPlaceholder storyboardName="ClientProfile" id="Pm7-8n-heq" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p2D-h4-r1O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1130" y="-62"/>
         </scene>
     </scenes>
 </document>

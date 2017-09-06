@@ -33,7 +33,6 @@ class LoginCompanyViewController: UIViewController {
         if (email?.isEmpty)! || (password?.isEmpty)! {
             messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
         } else {
-            
             //Firebase Login with email and password
             let authentication = Auth.auth()
             authentication.signIn(withEmail: email!, password: password!, completion: { (user, error) in
@@ -41,7 +40,7 @@ class LoginCompanyViewController: UIViewController {
                     if user == nil {
                         self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                     } else {
-                        
+                        self.performSegue(withIdentifier: Segues.LoginCompanyToCompanyProfileSegue, sender: nil)
                     }
                 } else {
                     self.messageAlert(title: "Dados Incorretos", message: ErrorMessages.DefaultError)
