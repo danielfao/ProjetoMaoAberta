@@ -44,6 +44,10 @@
 		E002ADF71F661788002CEE34 /* AdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */; };
 		E002ADF91F6617C9002CEE34 /* AdvertisingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */; };
 		E002ADFB1F6617F6002CEE34 /* AdvertisingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */; };
+		E06C802E1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E06C802D1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard */; };
+		E06C80311F662482002C9E96 /* MyAdvertisingLisTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C80301F662482002C9E96 /* MyAdvertisingLisTableViewController.swift */; };
+		E06C80331F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C80321F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift */; };
+		E06C80351F6624B9002C9E96 /* MyAdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E06C80341F6624B9002C9E96 /* MyAdvertisingViewController.swift */; };
 		E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A7461A1F4A544700FBC21A /* AppUtils.swift */; };
 		E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B309591F41C2D400666BF4 /* AppDelegate.swift */; };
 		E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B309621F41C2D400666BF4 /* LaunchScreen.storyboard */; };
@@ -89,6 +93,10 @@
 		E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingViewController.swift; sourceTree = "<group>"; };
 		E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingListTableViewCell.swift; sourceTree = "<group>"; };
 		E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingListTableViewController.swift; sourceTree = "<group>"; };
+		E06C802D1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MyAdvertisingsListTableView.storyboard; sourceTree = "<group>"; };
+		E06C80301F662482002C9E96 /* MyAdvertisingLisTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdvertisingLisTableViewController.swift; sourceTree = "<group>"; };
+		E06C80321F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdvertisingListTableViewCell.swift; sourceTree = "<group>"; };
+		E06C80341F6624B9002C9E96 /* MyAdvertisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAdvertisingViewController.swift; sourceTree = "<group>"; };
 		E0A7461A1F4A544700FBC21A /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		E0B309561F41C2D400666BF4 /* ProjetoMaoAberta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoMaoAberta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B309591F41C2D400666BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +132,7 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E06C802F1F662467002C9E96 /* MyAdvertisingsList */,
 				E002ADF51F66176B002CEE34 /* AdvertisingList */,
 				1138FA4E1F559DDD00536740 /* CompaniesList */,
 				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
@@ -215,6 +224,7 @@
 		11A6762A1F50616500C2DBDF /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				E06C802C1F661FF7002C9E96 /* Tableviews */,
 				11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */,
 				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
 				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
@@ -258,6 +268,24 @@
 				E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */,
 			);
 			name = AdvertisingList;
+			sourceTree = "<group>";
+		};
+		E06C802C1F661FF7002C9E96 /* Tableviews */ = {
+			isa = PBXGroup;
+			children = (
+				E06C802D1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard */,
+			);
+			name = Tableviews;
+			sourceTree = "<group>";
+		};
+		E06C802F1F662467002C9E96 /* MyAdvertisingsList */ = {
+			isa = PBXGroup;
+			children = (
+				E06C80301F662482002C9E96 /* MyAdvertisingLisTableViewController.swift */,
+				E06C80321F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift */,
+				E06C80341F6624B9002C9E96 /* MyAdvertisingViewController.swift */,
+			);
+			name = MyAdvertisingsList;
 			sourceTree = "<group>";
 		};
 		E0B3094D1F41C2D400666BF4 = {
@@ -370,6 +398,7 @@
 				1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */,
 				1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */,
 				E002ADF21F6601F1002CEE34 /* AdvertisingListTableView.storyboard in Resources */,
+				E06C802E1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard in Resources */,
 				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
 				1125C2A51F508617003AF453 /* ForgotPassword.storyboard in Resources */,
 				118209881F544718005116CE /* NewAdvertising.storyboard in Resources */,
@@ -456,6 +485,7 @@
 				119A63491F4B1B1900BE8E32 /* LoginClientViewController.swift in Sources */,
 				113A75EC1F599DA100FD9756 /* Advertising.swift in Sources */,
 				E002ADF41F66162A002CEE34 /* CompanyViewController.swift in Sources */,
+				E06C80311F662482002C9E96 /* MyAdvertisingLisTableViewController.swift in Sources */,
 				11A676381F5069F500C2DBDF /* AboutViewController.swift in Sources */,
 				E002ADF71F661788002CEE34 /* AdvertisingViewController.swift in Sources */,
 				1138FA501F559E1100536740 /* CompaniesListTableViewController.swift in Sources */,
@@ -463,12 +493,14 @@
 				119A63471F4B0FA300BE8E32 /* RegisterClientViewController.swift in Sources */,
 				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
 				113A75E91F57245B00FD9756 /* CompaniesListTableViewCell.swift in Sources */,
+				E06C80351F6624B9002C9E96 /* MyAdvertisingViewController.swift in Sources */,
 				11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */,
 				E002ADF91F6617C9002CEE34 /* AdvertisingListTableViewCell.swift in Sources */,
 				1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */,
 				119A634B1F4B1B4000BE8E32 /* LoginCompanyViewController.swift in Sources */,
 				11A676331F5066B700C2DBDF /* CompanyTabbarViewController.swift in Sources */,
 				11A676311F5066A200C2DBDF /* ClientTabbarViewController.swift in Sources */,
+				E06C80331F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift in Sources */,
 				119A63501F4B1D0E00BE8E32 /* Company.swift in Sources */,
 				E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */,
 				119A634E1F4B1BF600BE8E32 /* Client.swift in Sources */,

@@ -24,6 +24,7 @@
                         <segue destination="R92-9m-ujU" kind="relationship" relationship="viewControllers" id="TO7-fy-76a"/>
                         <segue destination="TDE-bJ-wh8" kind="relationship" relationship="viewControllers" id="N6k-Bl-7pH"/>
                         <segue destination="10U-bY-1gQ" kind="relationship" relationship="viewControllers" id="oKc-xh-Bvc"/>
+                        <segue destination="8Ih-xl-f6k" kind="relationship" relationship="viewControllers" id="dkv-62-02S"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGk-tN-op7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,7 +39,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fd-U1-AzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-729" y="612"/>
+            <point key="canvasLocation" x="-812" y="612"/>
         </scene>
         <!--About-->
         <scene sceneID="9bT-KQ-0mk">
@@ -48,7 +49,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tb-hL-GIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="612"/>
+            <point key="canvasLocation" x="438" y="612"/>
         </scene>
         <!--CompaniesListTableview-->
         <scene sceneID="3AE-mm-CAT">
@@ -58,7 +59,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GC-M6-NKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-453" y="612"/>
+            <point key="canvasLocation" x="-512" y="612"/>
+        </scene>
+        <!--MyAdvertisingsListTableView-->
+        <scene sceneID="Q4s-yU-xh9">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MyAdvertisingsListTableView" id="8Ih-xl-f6k" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="rmq-0Z-NfT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7CP-8G-BKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-162" y="612"/>
         </scene>
         <!--AdvertisingListTableView-->
         <scene sceneID="6yZ-3d-5Uc">
@@ -68,7 +79,7 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ge-mY-X7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-122" y="612"/>
+            <point key="canvasLocation" x="188" y="612"/>
         </scene>
         <!--Login-->
         <scene sceneID="f3f-tL-bCg">

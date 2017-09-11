@@ -45,7 +45,15 @@ struct ViewControllers {
 
 }
 
+struct Cells {
+    private init() {}
+    
+    static let CompaniesCell : String! = "CompaniesCell"
+    static let AdvertisingsCell : String! = "AdvertisingsCell"
+    static let MyAdvertisingsCell : String! = "MyAdvertisingsCell"
 
+
+}
 //MARK: - Segue
 struct Segues {
     private init() {}
@@ -58,6 +66,7 @@ struct Segues {
     static let TabBarCompanyToLoginSegue : String! = "TabBarCompanyToLogin"
     static let CompanyListToCompanySegue : String! = "CompanyListToCompanySegue"
     static let AdvertisingListToAdvertisingSegue : String! = "AdvertisingListToAdvertisingSegue"
+    static let AdvertisingListToEditAdvertisingSegue : String! = "AdvertisingListToEditAdvertisingSegue"
 }
 
 //MARK: - Firebase Errors
