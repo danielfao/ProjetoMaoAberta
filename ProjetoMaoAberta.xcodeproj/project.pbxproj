@@ -39,6 +39,11 @@
 		11EDE8CC1F4C5585007020F3 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */; };
 		11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */; };
 		3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */; };
+		E002ADF21F6601F1002CEE34 /* AdvertisingListTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E002ADF11F6601F1002CEE34 /* AdvertisingListTableView.storyboard */; };
+		E002ADF41F66162A002CEE34 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADF31F66162A002CEE34 /* CompanyViewController.swift */; };
+		E002ADF71F661788002CEE34 /* AdvertisingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */; };
+		E002ADF91F6617C9002CEE34 /* AdvertisingListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */; };
+		E002ADFB1F6617F6002CEE34 /* AdvertisingListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */; };
 		E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A7461A1F4A544700FBC21A /* AppUtils.swift */; };
 		E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0B309591F41C2D400666BF4 /* AppDelegate.swift */; };
 		E0B309641F41C2D400666BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0B309621F41C2D400666BF4 /* LaunchScreen.storyboard */; };
@@ -79,6 +84,11 @@
 		51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.release.xcconfig"; sourceTree = "<group>"; };
 		7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.debug.xcconfig"; sourceTree = "<group>"; };
 		B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoMaoAberta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E002ADF11F6601F1002CEE34 /* AdvertisingListTableView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AdvertisingListTableView.storyboard; sourceTree = "<group>"; };
+		E002ADF31F66162A002CEE34 /* CompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingViewController.swift; sourceTree = "<group>"; };
+		E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingListTableViewCell.swift; sourceTree = "<group>"; };
+		E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvertisingListTableViewController.swift; sourceTree = "<group>"; };
 		E0A7461A1F4A544700FBC21A /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
 		E0B309561F41C2D400666BF4 /* ProjetoMaoAberta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoMaoAberta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0B309591F41C2D400666BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +111,7 @@
 		11170CCB1F41DFEE008A3F50 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				118209851F544661005116CE /* Tableviews */,
 				11A6762A1F50616500C2DBDF /* Company */,
 				11A676291F50615800C2DBDF /* Client */,
 				11170CCC1F41E00F008A3F50 /* Login.storyboard */,
@@ -113,6 +124,7 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				E002ADF51F66176B002CEE34 /* AdvertisingList */,
 				1138FA4E1F559DDD00536740 /* CompaniesList */,
 				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
 				118209891F54473F005116CE /* NewAdvertising */,
@@ -139,6 +151,7 @@
 			children = (
 				1138FA4F1F559E1100536740 /* CompaniesListTableViewController.swift */,
 				113A75E81F57245B00FD9756 /* CompaniesListTableViewCell.swift */,
+				E002ADF31F66162A002CEE34 /* CompanyViewController.swift */,
 			);
 			name = CompaniesList;
 			sourceTree = "<group>";
@@ -147,13 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				1138FA4C1F559DB300536740 /* CompaniesListTableview.storyboard */,
-			);
-			name = Tableviews;
-			sourceTree = "<group>";
-		};
-		118209861F54466C005116CE /* Tableviews */ = {
-			isa = PBXGroup;
-			children = (
+				E002ADF11F6601F1002CEE34 /* AdvertisingListTableView.storyboard */,
 			);
 			name = Tableviews;
 			sourceTree = "<group>";
@@ -198,7 +205,6 @@
 		11A676291F50615800C2DBDF /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				118209861F54466C005116CE /* Tableviews */,
 				11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */,
 				11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */,
 				11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */,
@@ -209,7 +215,6 @@
 		11A6762A1F50616500C2DBDF /* Company */ = {
 			isa = PBXGroup;
 			children = (
-				118209851F544661005116CE /* Tableviews */,
 				11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */,
 				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
 				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
@@ -243,6 +248,16 @@
 				51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		E002ADF51F66176B002CEE34 /* AdvertisingList */ = {
+			isa = PBXGroup;
+			children = (
+				E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */,
+				E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */,
+				E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */,
+			);
+			name = AdvertisingList;
 			sourceTree = "<group>";
 		};
 		E0B3094D1F41C2D400666BF4 = {
@@ -354,6 +369,7 @@
 				11A6762C1F5061D500C2DBDF /* ClientTabBar.storyboard in Resources */,
 				1126B9531F4C74E400962477 /* CompanyProfile.storyboard in Resources */,
 				1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */,
+				E002ADF21F6601F1002CEE34 /* AdvertisingListTableView.storyboard in Resources */,
 				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
 				1125C2A51F508617003AF453 /* ForgotPassword.storyboard in Resources */,
 				118209881F544718005116CE /* NewAdvertising.storyboard in Resources */,
@@ -439,13 +455,16 @@
 				119A63521F4B20CA00BE8E32 /* RegisterCompanyViewController.swift in Sources */,
 				119A63491F4B1B1900BE8E32 /* LoginClientViewController.swift in Sources */,
 				113A75EC1F599DA100FD9756 /* Advertising.swift in Sources */,
+				E002ADF41F66162A002CEE34 /* CompanyViewController.swift in Sources */,
 				11A676381F5069F500C2DBDF /* AboutViewController.swift in Sources */,
+				E002ADF71F661788002CEE34 /* AdvertisingViewController.swift in Sources */,
 				1138FA501F559E1100536740 /* CompaniesListTableViewController.swift in Sources */,
 				11170CD01F41E06B008A3F50 /* MainLoginViewController.swift in Sources */,
 				119A63471F4B0FA300BE8E32 /* RegisterClientViewController.swift in Sources */,
 				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
 				113A75E91F57245B00FD9756 /* CompaniesListTableViewCell.swift in Sources */,
 				11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */,
+				E002ADF91F6617C9002CEE34 /* AdvertisingListTableViewCell.swift in Sources */,
 				1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */,
 				119A634B1F4B1B4000BE8E32 /* LoginCompanyViewController.swift in Sources */,
 				11A676331F5066B700C2DBDF /* CompanyTabbarViewController.swift in Sources */,
@@ -453,6 +472,7 @@
 				119A63501F4B1D0E00BE8E32 /* Company.swift in Sources */,
 				E0B3095A1F41C2D400666BF4 /* AppDelegate.swift in Sources */,
 				119A634E1F4B1BF600BE8E32 /* Client.swift in Sources */,
+				E002ADFB1F6617F6002CEE34 /* AdvertisingListTableViewController.swift in Sources */,
 				11170CD61F41E7A9008A3F50 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

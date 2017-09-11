@@ -1,24 +1,27 @@
 //
-//  CompaniesListTableViewCell.swift
+//  AdvertisingListTableViewCell.swift
 //  ProjetoMaoAberta
 //
-//  Created by Daniel Oliveira on 8/30/17.
+//  Created by Daniel Fernandes on 2017-09-10.
 //  Copyright © 2017 Daniel Fernandes. All rights reserved.
 //
 
 import UIKit
 
-class CompaniesListTableViewCell: UITableViewCell {
+class AdvertisingListTableViewCell: UITableViewCell {
 
     //MARK: - IBOutlets
     @IBOutlet weak var profileImage: UIImageView!
-    @IBOutlet weak var companyNameLabel: UILabel!
+    @IBOutlet weak var advertisingTitleLabel: UILabel!
+    @IBOutlet weak var expireDateLabel: UILabel!
+    @IBOutlet weak var dateIcon: UIImageView!
     @IBOutlet weak var arrowIcon: UIImageView!
     
     //MARK: - Functions
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        dateIcon.tintColor = Colors.Placeholder
         arrowIcon.tintColor = Colors.Placeholder
     }
 

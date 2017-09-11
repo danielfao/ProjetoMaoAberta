@@ -39,6 +39,10 @@ struct ViewControllers {
     static let LoginClientViewController : String! = "loginClientViewController"
     static let LoginCompanyViewController : String! = "loginCompanyViewController"
     static let ForgotPasswordViewController : String! = "forgotPasswordViewController"
+    static let AdvertisingViewController : String! = "advertisingViewController"
+    static let CompanyViewController : String! = "companyViewController"
+    static let NewAdvertisingViewController : String! = "newAdvertisingViewController"
+
 }
 
 
@@ -50,8 +54,10 @@ struct Segues {
     static let LoginCompanyToRegisterSegue : String! = "LoginCompanyToRegisterSegue"
     static let LoginCompanyToCompanyProfileSegue : String! = "LoginCompanyToCompanyProfileSegue"
     static let LoginClientToClientProfileSegue : String! = "LoginClientToClientProfileSegue"
-    static let TabBarClientToLogin : String! = "TabBarClientToLogin"
-    static let TabBarCompanyToLogin : String! = "TabBarCompanyToLogin"
+    static let TabBarClientToLoginSegue : String! = "TabBarClientToLoginSegue"
+    static let TabBarCompanyToLoginSegue : String! = "TabBarCompanyToLogin"
+    static let CompanyListToCompanySegue : String! = "CompanyListToCompanySegue"
+    static let AdvertisingListToAdvertisingSegue : String! = "AdvertisingListToAdvertisingSegue"
 }
 
 //MARK: - Firebase Errors

@@ -18,6 +18,14 @@ class LoginClientViewController: UIViewController {
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let isLogged = Auth.auth()
+        
+        isLogged.addStateDidChangeListener { (isLogged, user) in
+            if let userIsLogged = user {
+                self.performSegue(withIdentifier: "LoginClientToClientProfileSegue", sender: nil)
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {

@@ -37,11 +37,11 @@
                         <viewControllerLayoutGuide type="bottom" id="NsJ-ho-wPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ihh-W5-7EU">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1095"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Onh-at-Wu1">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="1046"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fqi-M6-8Da" userLabel="Content View">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="982"/>
@@ -232,6 +232,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LiH-mC-v5D"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="1095"/>
                     <connections>
                         <outlet property="CNPJTextField" destination="eW7-ud-eGp" id="Xz6-Ww-R9z"/>
                         <outlet property="addressTextField" destination="u6a-R3-YGM" id="JYJ-hm-a66"/>
