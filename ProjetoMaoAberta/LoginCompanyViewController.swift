@@ -40,7 +40,11 @@ class LoginCompanyViewController: UIViewController {
                     if user == nil {
                         self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                     } else {
-                        self.performSegue(withIdentifier: Segues.LoginCompanyToCompanyProfileSegue, sender: nil)
+                        //save user to userDefaults
+                        //tipo de user (client ou company)
+                        let sb = UIStoryboard(name: Storyboards.CompanyTabBarStoryboard, bundle: nil)
+                        let vc = sb.instantiateViewController(withIdentifier: ViewControllers.CompanyTabbarViewController)
+                        self.navigationController?.present(vc, animated: true, completion: nil)
                     }
                 } else {
                     self.messageAlert(title: "Dados Incorretos", message: ErrorMessages.DefaultError)

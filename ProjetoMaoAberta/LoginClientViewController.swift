@@ -19,13 +19,6 @@ class LoginClientViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let isLogged = Auth.auth()
-        
-        isLogged.addStateDidChangeListener { (isLogged, user) in
-            if let userIsLogged = user {
-                self.performSegue(withIdentifier: "LoginClientToClientProfileSegue", sender: nil)
-            }
-        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,7 +41,11 @@ class LoginClientViewController: UIViewController {
                     if user == nil {
                         self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                     } else {
-                        self.performSegue(withIdentifier: Segues.LoginClientToClientProfileSegue, sender: nil)
+                        //save user to userDefaults
+                        //tipo de user (client ou company)
+                        let sb = UIStoryboard(name: Storyboards.ClientTabBarStoryboard, bundle: nil)
+                        let vc = sb.instantiateViewController(withIdentifier: ViewControllers.ClientTabbarViewController)
+                        self.navigationController?.present(vc, animated: true, completion: nil)
                     }
                 } else {
                     self.messageAlert(title: "Dados Incorretos", message: ErrorMessages.DefaultError)

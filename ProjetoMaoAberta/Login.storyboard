@@ -28,7 +28,7 @@
         <!--Main Login View Controller-->
         <scene sceneID="leG-jY-IpA">
             <objects>
-                <viewController id="Nid-52-994" customClass="MainLoginViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="mainLoginViewController" id="Nid-52-994" customClass="MainLoginViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DGS-Sz-dPz"/>
                         <viewControllerLayoutGuide type="bottom" id="5l8-4l-S7F"/>

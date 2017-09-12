@@ -12,7 +12,7 @@
         <!--Company Tabbar View Controller-->
         <scene sceneID="sdB-fY-jtH">
             <objects>
-                <tabBarController id="Z7n-ta-iuW" customClass="CompanyTabbarViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="companyTabbarViewController" id="Z7n-ta-iuW" customClass="CompanyTabbarViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="y9D-MT-sDd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -21,10 +21,10 @@
                     <connections>
                         <segue destination="4g4-Rv-2a7" kind="presentation" identifier="TabBarCompanyToLogin" id="t3q-go-vd7"/>
                         <segue destination="Yc0-dq-XWu" kind="relationship" relationship="viewControllers" id="MVJ-YE-kLO"/>
-                        <segue destination="R92-9m-ujU" kind="relationship" relationship="viewControllers" id="TO7-fy-76a"/>
-                        <segue destination="TDE-bJ-wh8" kind="relationship" relationship="viewControllers" id="N6k-Bl-7pH"/>
-                        <segue destination="10U-bY-1gQ" kind="relationship" relationship="viewControllers" id="oKc-xh-Bvc"/>
                         <segue destination="8Ih-xl-f6k" kind="relationship" relationship="viewControllers" id="dkv-62-02S"/>
+                        <segue destination="10U-bY-1gQ" kind="relationship" relationship="viewControllers" id="oKc-xh-Bvc"/>
+                        <segue destination="TDE-bJ-wh8" kind="relationship" relationship="viewControllers" id="N6k-Bl-7pH"/>
+                        <segue destination="R92-9m-ujU" kind="relationship" relationship="viewControllers" id="TO7-fy-76a"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UGk-tN-op7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -35,7 +35,7 @@
         <scene sceneID="X2B-kS-1Cj">
             <objects>
                 <viewControllerPlaceholder storyboardName="CompanyProfile" id="Yc0-dq-XWu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="4Yx-rM-Zwo"/>
+                    <tabBarItem key="tabBarItem" title="Profile" id="4Yx-rM-Zwo"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7fd-U1-AzT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -45,7 +45,7 @@
         <scene sceneID="9bT-KQ-0mk">
             <objects>
                 <viewControllerPlaceholder storyboardName="About" id="R92-9m-ujU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="pHK-mI-3fZ"/>
+                    <tabBarItem key="tabBarItem" title="About" id="pHK-mI-3fZ"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4tb-hL-GIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,31 +55,31 @@
         <scene sceneID="3AE-mm-CAT">
             <objects>
                 <viewControllerPlaceholder storyboardName="CompaniesListTableview" id="TDE-bJ-wh8" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zjn-bt-KHu"/>
+                    <tabBarItem key="tabBarItem" title="CompList" id="Zjn-bt-KHu"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GC-M6-NKA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-512" y="612"/>
+            <point key="canvasLocation" x="190" y="612"/>
         </scene>
         <!--MyAdvertisingsListTableView-->
         <scene sceneID="Q4s-yU-xh9">
             <objects>
                 <viewControllerPlaceholder storyboardName="MyAdvertisingsListTableView" id="8Ih-xl-f6k" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="rmq-0Z-NfT"/>
+                    <tabBarItem key="tabBarItem" title="MyAds" id="rmq-0Z-NfT"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7CP-8G-BKU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-162" y="612"/>
+            <point key="canvasLocation" x="-509" y="612"/>
         </scene>
         <!--AdvertisingListTableView-->
         <scene sceneID="6yZ-3d-5Uc">
             <objects>
                 <viewControllerPlaceholder storyboardName="AdvertisingListTableView" id="10U-bY-1gQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="x5J-JV-2Mq"/>
+                    <tabBarItem key="tabBarItem" title="Ads" id="x5J-JV-2Mq"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ge-mY-X7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="188" y="612"/>
+            <point key="canvasLocation" x="-138" y="612"/>
         </scene>
         <!--Login-->
         <scene sceneID="f3f-tL-bCg">

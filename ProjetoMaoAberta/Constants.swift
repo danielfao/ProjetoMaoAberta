@@ -22,18 +22,20 @@ struct Colors {
 struct Storyboards {
     private init() {}
     
-    static let MainLoginStoryboard : String! = "MainLogin"
+    static let MainLoginStoryboard : String! = "Login"
     static let RegisterClientStoryboard : String! = "RegisterClient"
     static let RegisterCompanyStoryboard : String! = "RegisterCompany"
     static let ForgotPasswordStoryboard : String! = "ForgotPassword"
-    
+    static let ClientTabBarStoryboard : String! = "ClientTabBar"
+    static let CompanyTabBarStoryboard : String! = "CompanyTabBar"
+    static let InitialSetUpStoryboard : String! = "InitialSetUp"
 }
 
 //MARK: - Storyboards
 struct ViewControllers {
     private init() {}
     
-    static let MainLoginViewController : String! = "mainLoginvViewController"
+    static let MainLoginViewController : String! = "mainLoginViewController"
     static let RegisterClientViewController : String! = "registerClientViewController"
     static let RegisterCompanyViewController : String! = "registerCompanyViewController"
     static let LoginClientViewController : String! = "loginClientViewController"
@@ -42,7 +44,8 @@ struct ViewControllers {
     static let AdvertisingViewController : String! = "advertisingViewController"
     static let CompanyViewController : String! = "companyViewController"
     static let NewAdvertisingViewController : String! = "newAdvertisingViewController"
-
+    static let ClientTabbarViewController : String! = "clientTabbarViewController"
+    static let CompanyTabbarViewController : String! = "companyTabbarViewController"
 }
 
 struct Cells {

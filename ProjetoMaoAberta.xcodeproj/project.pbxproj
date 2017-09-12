@@ -38,6 +38,8 @@
 		11A676381F5069F500C2DBDF /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A676371F5069F500C2DBDF /* AboutViewController.swift */; };
 		11EDE8CC1F4C5585007020F3 /* ClientProfile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */; };
 		11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */; };
+		11FE55681F6836250089ADE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11FE55671F6836250089ADE6 /* Main.storyboard */; };
+		11FE556A1F6836520089ADE6 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11FE55691F6836520089ADE6 /* InitialViewController.swift */; };
 		3DAF31EBFF72F07874815759 /* Pods_ProjetoMaoAberta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */; };
 		E002ADF21F6601F1002CEE34 /* AdvertisingListTableView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E002ADF11F6601F1002CEE34 /* AdvertisingListTableView.storyboard */; };
 		E002ADF41F66162A002CEE34 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E002ADF31F66162A002CEE34 /* CompanyViewController.swift */; };
@@ -85,6 +87,8 @@
 		11A676371F5069F500C2DBDF /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ClientProfile.storyboard; sourceTree = "<group>"; };
 		11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProfileViewController.swift; sourceTree = "<group>"; };
+		11FE55671F6836250089ADE6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		11FE55691F6836520089ADE6 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.release.xcconfig"; sourceTree = "<group>"; };
 		7B4374DE0367C1AC5F3C72FA /* Pods-ProjetoMaoAberta.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoMaoAberta.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoMaoAberta/Pods-ProjetoMaoAberta.debug.xcconfig"; sourceTree = "<group>"; };
 		B1877EBC42E2EC794AEC4F4B /* Pods_ProjetoMaoAberta.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoMaoAberta.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +129,7 @@
 				11170CCC1F41E00F008A3F50 /* Login.storyboard */,
 				11A676341F5069C600C2DBDF /* About.storyboard */,
 				1125C2A41F508617003AF453 /* ForgotPassword.storyboard */,
+				11FE55671F6836250089ADE6 /* Main.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 				11A6762F1F50666600C2DBDF /* TabBars */,
 				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
 				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
+				11FE55691F6836520089ADE6 /* InitialViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -399,6 +405,7 @@
 				1125C2A31F5083B3003AF453 /* Assets.xcassets in Resources */,
 				E002ADF21F6601F1002CEE34 /* AdvertisingListTableView.storyboard in Resources */,
 				E06C802E1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard in Resources */,
+				11FE55681F6836250089ADE6 /* Main.storyboard in Resources */,
 				11A6762E1F5064E500C2DBDF /* CompanyTabBar.storyboard in Resources */,
 				1125C2A51F508617003AF453 /* ForgotPassword.storyboard in Resources */,
 				118209881F544718005116CE /* NewAdvertising.storyboard in Resources */,
@@ -494,6 +501,7 @@
 				E0A7461B1F4A544700FBC21A /* AppUtils.swift in Sources */,
 				113A75E91F57245B00FD9756 /* CompaniesListTableViewCell.swift in Sources */,
 				E06C80351F6624B9002C9E96 /* MyAdvertisingViewController.swift in Sources */,
+				11FE556A1F6836520089ADE6 /* InitialViewController.swift in Sources */,
 				11EDE8CF1F4C5DC7007020F3 /* ClientProfileViewController.swift in Sources */,
 				E002ADF91F6617C9002CEE34 /* AdvertisingListTableViewCell.swift in Sources */,
 				1182098B1F544756005116CE /* NewAdvertisingViewController.swift in Sources */,
