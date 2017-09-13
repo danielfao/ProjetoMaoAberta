@@ -54,15 +54,17 @@ class LoginClientViewController: UIViewController {
     }
     
     @IBAction func didTapCreateNewAccountButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Storyboards.RegisterClientStoryboard, bundle: nil)
-        let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterClientViewController) as! RegisterClientViewController
-        navigationController?.pushViewController(registerCompanyViewController, animated: true)
+//        let storyboard = UIStoryboard(name: Storyboards.RegisterClientStoryboard, bundle: nil)
+//        let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterClientViewController) as! RegisterClientViewController
+//        self.navigationController?.pushViewController(registerCompanyViewController, animated: true)
+        self.performSegue(withIdentifier: Segues.LoginClientToRegisterSegue, sender: nil)
     }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
-        let storyboard = UIStoryboard(name: Storyboards.ForgotPasswordStoryboard, bundle: nil)
-        let forgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.ForgotPasswordViewController) as! ForgotPasswordViewController
-        navigationController?.pushViewController(forgotPasswordViewController, animated: true)
+//        let storyboard = UIStoryboard(name: Storyboards.ForgotPasswordStoryboard, bundle: nil)
+//        let forgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.ForgotPasswordViewController) as! ForgotPasswordViewController
+//        self.navigationController?.pushViewController(forgotPasswordViewController, animated: true)
+        self.performSegue(withIdentifier: Segues.LoginClientToForgotPasswordSegue, sender: nil)
     }
     
 }

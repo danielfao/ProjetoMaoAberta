@@ -20,8 +20,8 @@ class RegisterClientViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextView: UITextField!
     
     
-    //MARK: - Constants
-    let database = Database.database().reference()
+    //MARK: - Variables
+    var database: DatabaseReference!
     
     //MARK: - Functions
     override func viewDidLoad() {
@@ -30,13 +30,14 @@ class RegisterClientViewController: UIViewController {
         //Setup navbar and change the back button color
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         
         //Keyboard functions
         self.hideKeyboardWhenTappedAround()
         self.showKeyboard()
         self.hideKeyboard()
+        
+        database = Database.database().reference()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -73,6 +74,7 @@ class RegisterClientViewController: UIViewController {
                             self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                         } else {
                             self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber, "senha" : password])
+                            self.database.child("tipo").child((user?.uid)!).setValue(["tipo" : "voluntario"])
                             
                             self.performSegue(withIdentifier: Segues.LoginClientToClientProfileSegue, sender: nil)
                         }

@@ -31,11 +31,10 @@ class MainLoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.setNavigationBarHidden(true, animated: false)
-        self.navigationController?.navigationBar.isTranslucent = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.navigationBar.isTranslucent = true
+
     }
 
     override func didReceiveMemoryWarning() {
