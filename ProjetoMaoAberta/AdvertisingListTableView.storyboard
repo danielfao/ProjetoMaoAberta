@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lV8-BW-S7B" id="Im2-Sm-e3U">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="8R3-7Q-Xjs" userLabel="ProfileImage">
@@ -183,7 +183,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXF-n7-MHg">
-                                <rect key="frame" x="32" y="585" width="311" height="50"/>
+                                <rect key="frame" x="32" y="536" width="311" height="50"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wJW-m8-qnv"/>
@@ -252,7 +252,7 @@
         <scene sceneID="Sd4-Fe-RvZ">
             <objects>
                 <navigationController id="Wx4-gz-04w" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Anúncios" id="bWK-qd-lrf"/>
+                    <tabBarItem key="tabBarItem" title="Anúncios" image="ic_advertising" id="bWK-qd-lrf"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DzA-gE-2D1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -268,6 +268,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_advertising" width="24" height="24"/>
         <image name="ic_date_range" width="24" height="24"/>
         <image name="logo_mao_aberta" width="383" height="393"/>
         <image name="right-arrow" width="12" height="21"/>

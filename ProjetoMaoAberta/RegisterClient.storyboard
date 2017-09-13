@@ -12,7 +12,7 @@
         <!--Navigation Controller-->
         <scene sceneID="msy-CI-P59">
             <objects>
-                <navigationController storyboardIdentifier="RegisterClient" id="oJg-Hc-ppa" sceneMemberID="viewController">
+                <navigationController id="oJg-Hc-ppa" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BFd-GN-Eqc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -37,8 +37,6 @@ class InitialViewController: UIViewController {
             let vc = sb.instantiateViewController(withIdentifier: ViewControllers.MainLoginViewController)
             self.navigationController?.present(vc, animated: true, completion: nil)
         }
-        // if client -> tabbar controller client
-        //else -> tabbar controller company
     }
 
     override func didReceiveMemoryWarning() {

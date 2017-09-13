@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H4H-yW-KZo" id="BwJ-Zb-KQA">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="V0v-cN-X5q" userLabel="ProfileImage">
@@ -302,7 +302,7 @@
         <scene sceneID="IlW-HM-VCY">
             <objects>
                 <navigationController id="Ynx-tw-bQE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Meus Anúncios" id="hPR-aM-fEn"/>
+                    <tabBarItem key="tabBarItem" title="Meus Anúncios" image="ic_myadvertising" id="hPR-aM-fEn"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vIF-Tp-8pL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -319,6 +319,7 @@
     </scenes>
     <resources>
         <image name="ic_date_range" width="24" height="24"/>
+        <image name="ic_myadvertising" width="24" height="24"/>
         <image name="logo_mao_aberta" width="383" height="393"/>
         <image name="right-arrow" width="12" height="21"/>
     </resources>

@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 class RegisterClientViewController: UIViewController {
     
@@ -17,6 +18,10 @@ class RegisterClientViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextView: UITextField!
     @IBOutlet weak var passwordTextView: UITextField!
     @IBOutlet weak var confirmPasswordTextView: UITextField!
+    
+    
+    //MARK: - Constants
+    let database = Database.database().reference()
     
     //MARK: - Functions
     override func viewDidLoad() {
@@ -67,6 +72,8 @@ class RegisterClientViewController: UIViewController {
                         if user == nil {
                             self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                         } else {
+                            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber, "senha" : password])
+                            
                             self.performSegue(withIdentifier: Segues.LoginClientToClientProfileSegue, sender: nil)
                         }
                     } else {

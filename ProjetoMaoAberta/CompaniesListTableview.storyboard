@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zxR-mG-gzr" id="CXF-Pf-SjI">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="FK0-A0-bEV">
@@ -340,7 +340,7 @@
         <scene sceneID="nGq-FC-Nbo">
             <objects>
                 <navigationController id="JBK-Id-h7U" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Organizações" id="qCE-z3-FcP"/>
+                    <tabBarItem key="tabBarItem" title="Organizações" image="ic_companies" id="qCE-z3-FcP"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="lwG-Vr-97s">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -356,6 +356,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_companies" width="24" height="24"/>
         <image name="logo_mao_aberta" width="383" height="393"/>
         <image name="right-arrow" width="12" height="21"/>
     </resources>
