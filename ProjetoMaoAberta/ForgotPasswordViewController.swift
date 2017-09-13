@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class ForgotPasswordViewController: UIViewController {
 
@@ -39,11 +40,16 @@ class ForgotPasswordViewController: UIViewController {
         let email = emailTextField.text
         
         if (email?.isEmpty)! {
-            let alert = UIAlertController(title: title, message: "Por favor, digite o seu e-mail", preferredStyle: UIAlertControllerStyle.alert)
-            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            
-            alert.addAction(cancelAction)
-            self.present(alert, animated: true, completion: nil)
+            self.messageAlert(title: title!, message: ErrorMessages.EmailFieldEmpty)
+        } else {
+            Auth.auth().sendPasswordReset(withEmail: email!) { (error) in
+                
+                if error != nil {
+                    self.messageAlert(title: "Erro", message: ErrorMessages.UnexpectedError)
+                } else {
+                    self.messageAlert(title: "Email Enviado", message: Messages.EmailSentSuccessfully)
+                }
+            }
         }
     }
     

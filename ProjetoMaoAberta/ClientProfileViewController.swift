@@ -23,6 +23,9 @@ class ClientProfileViewController: UIViewController {
     //MARK: - Variables
     var database: DatabaseReference!
     
+    //MARK: - Constants
+    let user = Auth.auth().currentUser
+    
     //MARK: - Functions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +45,7 @@ class ClientProfileViewController: UIViewController {
     }
     
     func getUserData() {
-        let user = Auth.auth().currentUser
-        database.child("usuarios").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            database.child("usuarios").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
             let value = snapshot.value as? NSDictionary
             
             self.nameTextField.text = value?["nome"] as? String
@@ -52,9 +54,44 @@ class ClientProfileViewController: UIViewController {
         })
     }
     
+    func updateData() {
+        let name = nameTextField.text
+        let phoneNumber = phoneNumberTextField.text
+        
+        if (name?.isEmpty)! || (phoneNumber?.isEmpty)! {
+            messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
+        } else {
+            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "telefone" : phoneNumber])
+        }
+    }
+    
+    func updatePassword() {
+        let password = passwordTextField.text
+        let confirmPassword = confirmPasswordTextField.text
+        
+        if (!((password?.isEmpty)!)) {
+            if (password != confirmPassword) {
+                messageAlert(title: "Dados Incorretos", message: ErrorMessages.PasswordsAndConfirmIncorret )
+            } else {
+                Auth.auth().currentUser?.updatePassword(to: password!) { (error) in
+                    //FIXME: - Implements Update Password code
+                    if error == nil {
+
+                    } else {
+                        self.messageAlert(title: "Sucesso", message: Messages.DataUpdated)
+                    }
+                }
+            }
+        }
+
+    }
+    
     //MARK: - IBActions
     @IBAction func didTapUpdateButton(_ sender: Any) {
+        updateData()
+        updatePassword()
         
+        messageAlert(title: title!, message: Messages.DataUpdated)
     }
     
 }
