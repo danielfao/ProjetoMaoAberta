@@ -35,4 +35,10 @@ class CompaniesListTableViewController: UITableViewController {
         
         return cell
     }
+    
+    //MARK: - IBActions
+    @IBAction func didTapLogout(_ sender: Any) {
+        logout()
+    }
+    
 }

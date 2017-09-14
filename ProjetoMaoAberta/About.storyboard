@@ -98,7 +98,13 @@
                             <constraint firstItem="6MA-oj-Z5k" firstAttribute="leading" secondItem="FIj-Pf-lJk" secondAttribute="leading" constant="16" id="z4c-Mu-9lS"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Enf-iB-8XS"/>
+                    <navigationItem key="navigationItem" id="Enf-iB-8XS">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="AfL-HQ-T0d">
+                            <connections>
+                                <action selector="didTapLogout:" destination="9ao-yU-iJd" id="Wkd-5r-IKD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="githubImage" destination="EeR-AY-iuF" id="EO9-FE-WIn"/>
                         <outlet property="githubView" destination="6MA-oj-Z5k" id="bd0-ZX-ykP"/>

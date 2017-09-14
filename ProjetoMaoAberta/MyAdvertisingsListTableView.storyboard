@@ -109,7 +109,13 @@
                             <outlet property="delegate" destination="GGy-Zh-jAi" id="j39-LG-gvi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Meus Anúncios" id="asU-Tc-j2J"/>
+                    <navigationItem key="navigationItem" title="Meus Anúncios" id="asU-Tc-j2J">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="ynq-rx-OQv">
+                            <connections>
+                                <action selector="didTapLogout:" destination="GGy-Zh-jAi" id="CJd-eo-cK9"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="6xN-je-inX" kind="show" identifier="AdvertisingListToEditAdvertisingSegue" id="YAD-Yt-ZMj"/>
                     </connections>

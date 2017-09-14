@@ -22,8 +22,7 @@ class AboutViewController: UIViewController {
         self.navigationItem.title = "Projeto Mão Aberta"
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
-        //Logout
-//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Sair", style: .plain, target: self, action: nil)
+        
         githubImage.tintColor = UIColor.white
     
         let tap = UITapGestureRecognizer(target: self, action: #selector(AboutViewController.didTapGithubButton))
@@ -38,5 +37,9 @@ class AboutViewController: UIViewController {
     
     func didTapGithubButton() {
         UIApplication.shared.open(URL(string: "https://github.com/danielfao/ProjetoMaoAberta")!, options: [:], completionHandler: nil)
+    }
+    
+    @IBAction func didTapLogout(_ sender: Any) {
+        logout()
     }
 }

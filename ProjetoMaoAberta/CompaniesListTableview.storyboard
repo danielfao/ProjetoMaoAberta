@@ -73,7 +73,13 @@
                             <outlet property="delegate" destination="Ryr-e8-VRh" id="Wcz-Z5-95V"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Entidades" id="pgH-1I-xvR"/>
+                    <navigationItem key="navigationItem" title="Entidades" id="pgH-1I-xvR">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="DXb-VS-kFC">
+                            <connections>
+                                <action selector="didTapLogout:" destination="Ryr-e8-VRh" id="MFy-gk-7No"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="agZ-JH-S2A" kind="show" identifier="CompanyListToCompanySegue" id="4jt-Hk-6I3"/>
                     </connections>

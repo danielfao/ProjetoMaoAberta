@@ -61,4 +61,8 @@ class CompanyProfileViewController: UIViewController, UITextViewDelegate {
     //MARK: - IBActions
     @IBAction func didTapUpdateButton(_ sender: Any) {
     }
+
+    @IBAction func didTapLogout(_ sender: Any) {
+        logout()
+    }
 }

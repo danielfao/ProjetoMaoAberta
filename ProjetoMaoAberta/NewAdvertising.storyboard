@@ -222,7 +222,13 @@
                             <constraint firstItem="UVM-XL-9bZ" firstAttribute="top" secondItem="pOU-A3-nFK" secondAttribute="bottom" id="unM-pT-CEe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="IzH-z1-Ywn"/>
+                    <navigationItem key="navigationItem" id="IzH-z1-Ywn">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="bb0-Mz-gct">
+                            <connections>
+                                <action selector="didTapLogout:" destination="3Bn-3I-Elf" id="6Hb-kZ-WM6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="beginDatePickerTextField" destination="XWh-0D-fv3" id="Bnt-YT-zLo"/>
                         <outlet property="beginDateView" destination="JuL-QS-15j" id="FiL-qN-hZo"/>

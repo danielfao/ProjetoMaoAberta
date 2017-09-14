@@ -231,7 +231,13 @@
                             <constraint firstItem="Onh-at-Wu1" firstAttribute="top" secondItem="ihh-W5-7EU" secondAttribute="top" id="nHZ-60-toU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LiH-mC-v5D"/>
+                    <navigationItem key="navigationItem" id="LiH-mC-v5D">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="JNR-NS-b2Q">
+                            <connections>
+                                <action selector="didTapLogout:" destination="giu-6A-azY" id="MqE-jr-Gna"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1095"/>
                     <connections>

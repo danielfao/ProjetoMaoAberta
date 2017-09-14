@@ -24,7 +24,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lV8-BW-S7B" id="Im2-Sm-e3U">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_mao_aberta" translatesAutoresizingMaskIntoConstraints="NO" id="8R3-7Q-Xjs" userLabel="ProfileImage">
@@ -109,7 +109,13 @@
                             <outlet property="delegate" destination="f5y-YC-ed5" id="f40-Rv-nT4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Anúncios" id="bKI-iB-Jxj" userLabel="Anúncios"/>
+                    <navigationItem key="navigationItem" title="Anúncios" id="bKI-iB-Jxj" userLabel="Anúncios">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="XJk-Fc-cn1">
+                            <connections>
+                                <action selector="didTapLogout:" destination="f5y-YC-ed5" id="krc-yo-1ai"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="cDK-QA-ofL" kind="show" identifier="AdvertisingListToAdvertisingSegue" id="FKl-wQ-1xf"/>
                     </connections>

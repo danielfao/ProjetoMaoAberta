@@ -121,4 +121,8 @@ class NewAdvertisingViewController: UIViewController, UITextViewDelegate {
     @IBAction func didTapSaveButton(_ sender: Any) {
     }
     
+    @IBAction func didTapLogout(_ sender: Any) {
+        logout()
+    }
+    
 }
