@@ -30,6 +30,7 @@ class RegisterClientViewController: UIViewController {
     
     //MARK: - Functions
     override func viewDidLoad() {
+        //comment
         super.viewDidLoad()
         
         //Setup navbar and change the back button color
