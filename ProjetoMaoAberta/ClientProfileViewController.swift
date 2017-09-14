@@ -57,11 +57,12 @@ class ClientProfileViewController: UIViewController {
     func updateData() {
         let name = nameTextField.text
         let phoneNumber = phoneNumberTextField.text
+        let email = emailTextField.text
         
         if (name?.isEmpty)! || (phoneNumber?.isEmpty)! {
             messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
         } else {
-            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "telefone" : phoneNumber])
+            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber])
         }
     }
     
@@ -75,8 +76,8 @@ class ClientProfileViewController: UIViewController {
             } else {
                 Auth.auth().currentUser?.updatePassword(to: password!) { (error) in
                     //FIXME: - Implements Update Password code
-                    if error == nil {
-
+                    if error != nil {
+                        self.messageAlert(title: "Erro", message: ErrorMessages.AuthenticationError)
                     } else {
                         self.messageAlert(title: "Sucesso", message: Messages.DataUpdated)
                     }
@@ -90,8 +91,7 @@ class ClientProfileViewController: UIViewController {
     @IBAction func didTapUpdateButton(_ sender: Any) {
         updateData()
         updatePassword()
-        
-        messageAlert(title: title!, message: Messages.DataUpdated)
+        self.reloadInputViews()
     }
     
 }

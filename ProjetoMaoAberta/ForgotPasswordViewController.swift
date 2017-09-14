@@ -40,7 +40,7 @@ class ForgotPasswordViewController: UIViewController {
         let email = emailTextField.text
         
         if (email?.isEmpty)! {
-            self.messageAlert(title: title!, message: ErrorMessages.EmailFieldEmpty)
+            self.messageAlert(title: "Erro", message: ErrorMessages.EmailFieldEmpty)
         } else {
             Auth.auth().sendPasswordReset(withEmail: email!) { (error) in
                 

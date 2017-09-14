@@ -73,7 +73,7 @@ class RegisterClientViewController: UIViewController {
                         if user == nil {
                             self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                         } else {
-                            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber, "senha" : password])
+                            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber])
                             self.database.child("tipo").child((user?.uid)!).setValue(["tipo" : "voluntario"])
                             
                             self.performSegue(withIdentifier: Segues.LoginClientToClientProfileSegue, sender: nil)

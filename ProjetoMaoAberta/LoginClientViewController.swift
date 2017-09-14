@@ -42,12 +42,37 @@ class LoginClientViewController: UIViewController {
                     } else {
                         //save user to userDefaults
                         //tipo de user (client ou company)
+                        print("Authenticação ok",authentication)
                         let sb = UIStoryboard(name: Storyboards.ClientTabBarStoryboard, bundle: nil)
                         let vc = sb.instantiateViewController(withIdentifier: ViewControllers.ClientTabbarViewController)
                         self.navigationController?.present(vc, animated: true, completion: nil)
                     }
                 } else {
-                    self.messageAlert(title: "Dados Incorretos", message: ErrorMessages.DefaultError)
+                    let errorRecovered = error! as NSError
+                    
+                    if let errorCode = errorRecovered.userInfo["error_name"] {
+                        let errorText = errorCode as! String
+                        var errorMessage = ""
+                        
+                        switch errorText {
+                        case FirebaseErrorType.InvalidEmail :
+                            errorMessage = ErrorMessages.InvalidEmail
+                            break
+                            
+                        case FirebaseErrorType.WeakPassword :
+                            errorMessage = ErrorMessages.WeakPassword
+                            break
+                            
+                        case FirebaseErrorType.EmailAlreadyUsed :
+                            errorMessage = ErrorMessages.EmailAlreadyUsed
+                            break
+                            
+                        default :
+                            errorMessage = ErrorMessages.DefaultError
+                        }
+                        
+                        self.messageAlert(title: "Dados Inválidos", message: errorMessage)
+                    }
                 }
             })
         }
