@@ -123,13 +123,14 @@
 		11170CCB1F41DFEE008A3F50 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				118209851F544661005116CE /* Tableviews */,
-				11A6762A1F50616500C2DBDF /* Company */,
-				11A676291F50615800C2DBDF /* Client */,
+				11FE55671F6836250089ADE6 /* Main.storyboard */,
 				11170CCC1F41E00F008A3F50 /* Login.storyboard */,
 				11A676341F5069C600C2DBDF /* About.storyboard */,
 				1125C2A41F508617003AF453 /* ForgotPassword.storyboard */,
-				11FE55671F6836250089ADE6 /* Main.storyboard */,
+				11825E9A1F6ACD46003EC587 /* Tabbars */,
+				118209851F544661005116CE /* Tableviews */,
+				11A6762A1F50616500C2DBDF /* Company */,
+				11A676291F50615800C2DBDF /* Client */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -137,17 +138,15 @@
 		11170CCE1F41E03A008A3F50 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				E06C802F1F662467002C9E96 /* MyAdvertisingsList */,
-				E002ADF51F66176B002CEE34 /* AdvertisingList */,
-				1138FA4E1F559DDD00536740 /* CompaniesList */,
-				119A63541F4B2AEA00BE8E32 /* LoginControllers */,
-				118209891F54473F005116CE /* NewAdvertising */,
-				11EDE8CD1F4C5DAC007020F3 /* Profile */,
-				119A63531F4B2AD500BE8E32 /* RegisterControllers */,
-				11A6762F1F50666600C2DBDF /* TabBars */,
 				11A676371F5069F500C2DBDF /* AboutViewController.swift */,
 				1125C2A71F50864A003AF453 /* ForgotPasswordViewController.swift */,
 				11FE55691F6836520089ADE6 /* InitialViewController.swift */,
+				11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */,
+				11825E971F6ACC13003EC587 /* Client */,
+				11825E961F6ACC08003EC587 /* Company */,
+				11A6762F1F50666600C2DBDF /* TabBars */,
+				11825E981F6ACC7A003EC587 /* TableCells */,
+				11825E991F6ACCBC003EC587 /* TableViews */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -161,31 +160,67 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		1138FA4E1F559DDD00536740 /* CompaniesList */ = {
-			isa = PBXGroup;
-			children = (
-				1138FA4F1F559E1100536740 /* CompaniesListTableViewController.swift */,
-				113A75E81F57245B00FD9756 /* CompaniesListTableViewCell.swift */,
-				E002ADF31F66162A002CEE34 /* CompanyViewController.swift */,
-			);
-			name = CompaniesList;
-			sourceTree = "<group>";
-		};
 		118209851F544661005116CE /* Tableviews */ = {
 			isa = PBXGroup;
 			children = (
 				1138FA4C1F559DB300536740 /* CompaniesListTableview.storyboard */,
 				E002ADF11F6601F1002CEE34 /* AdvertisingListTableView.storyboard */,
+				E06C802D1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard */,
 			);
 			name = Tableviews;
 			sourceTree = "<group>";
 		};
-		118209891F54473F005116CE /* NewAdvertising */ = {
+		11825E961F6ACC08003EC587 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */,
+				1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */,
+				E002ADF31F66162A002CEE34 /* CompanyViewController.swift */,
+				119A634A1F4B1B4000BE8E32 /* LoginCompanyViewController.swift */,
+				E06C80341F6624B9002C9E96 /* MyAdvertisingViewController.swift */,
 				1182098A1F544756005116CE /* NewAdvertisingViewController.swift */,
+				119A63511F4B20CA00BE8E32 /* RegisterCompanyViewController.swift */,
 			);
-			name = NewAdvertising;
+			name = Company;
+			sourceTree = "<group>";
+		};
+		11825E971F6ACC13003EC587 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */,
+				119A63481F4B1B1900BE8E32 /* LoginClientViewController.swift */,
+				119A63461F4B0FA300BE8E32 /* RegisterClientViewController.swift */,
+			);
+			name = Client;
+			sourceTree = "<group>";
+		};
+		11825E981F6ACC7A003EC587 /* TableCells */ = {
+			isa = PBXGroup;
+			children = (
+				E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */,
+				113A75E81F57245B00FD9756 /* CompaniesListTableViewCell.swift */,
+				E06C80321F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift */,
+			);
+			name = TableCells;
+			sourceTree = "<group>";
+		};
+		11825E991F6ACCBC003EC587 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */,
+				1138FA4F1F559E1100536740 /* CompaniesListTableViewController.swift */,
+				E06C80301F662482002C9E96 /* MyAdvertisingLisTableViewController.swift */,
+			);
+			name = TableViews;
+			sourceTree = "<group>";
+		};
+		11825E9A1F6ACD46003EC587 /* Tabbars */ = {
+			isa = PBXGroup;
+			children = (
+				11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */,
+				11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */,
+			);
+			name = Tabbars;
 			sourceTree = "<group>";
 		};
 		119A634C1F4B1BDE00BE8E32 /* Model */ = {
@@ -198,29 +233,9 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		119A63531F4B2AD500BE8E32 /* RegisterControllers */ = {
-			isa = PBXGroup;
-			children = (
-				119A63461F4B0FA300BE8E32 /* RegisterClientViewController.swift */,
-				119A63511F4B20CA00BE8E32 /* RegisterCompanyViewController.swift */,
-			);
-			name = RegisterControllers;
-			sourceTree = "<group>";
-		};
-		119A63541F4B2AEA00BE8E32 /* LoginControllers */ = {
-			isa = PBXGroup;
-			children = (
-				11170CCF1F41E06B008A3F50 /* MainLoginViewController.swift */,
-				119A63481F4B1B1900BE8E32 /* LoginClientViewController.swift */,
-				119A634A1F4B1B4000BE8E32 /* LoginCompanyViewController.swift */,
-			);
-			name = LoginControllers;
-			sourceTree = "<group>";
-		};
 		11A676291F50615800C2DBDF /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				11A6762B1F5061D500C2DBDF /* ClientTabBar.storyboard */,
 				11357CEB1F4B07140026AF82 /* RegisterClient.storyboard */,
 				11EDE8CB1F4C5585007020F3 /* ClientProfile.storyboard */,
 			);
@@ -230,8 +245,6 @@
 		11A6762A1F50616500C2DBDF /* Company */ = {
 			isa = PBXGroup;
 			children = (
-				E06C802C1F661FF7002C9E96 /* Tableviews */,
-				11A6762D1F5064E500C2DBDF /* CompanyTabBar.storyboard */,
 				1126B9521F4C74E400962477 /* CompanyProfile.storyboard */,
 				11357CED1F4B07320026AF82 /* RegisterCompany.storyboard */,
 				118209871F544718005116CE /* NewAdvertising.storyboard */,
@@ -248,15 +261,6 @@
 			name = TabBars;
 			sourceTree = "<group>";
 		};
-		11EDE8CD1F4C5DAC007020F3 /* Profile */ = {
-			isa = PBXGroup;
-			children = (
-				11EDE8CE1F4C5DC7007020F3 /* ClientProfileViewController.swift */,
-				1126B9541F4C76E900962477 /* CompanyProfileViewController.swift */,
-			);
-			name = Profile;
-			sourceTree = "<group>";
-		};
 		71684512BC623FDD8698461F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,34 +268,6 @@
 				51791B63F88F98CDE0D7B79C /* Pods-ProjetoMaoAberta.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		E002ADF51F66176B002CEE34 /* AdvertisingList */ = {
-			isa = PBXGroup;
-			children = (
-				E002ADF61F661788002CEE34 /* AdvertisingViewController.swift */,
-				E002ADF81F6617C9002CEE34 /* AdvertisingListTableViewCell.swift */,
-				E002ADFA1F6617F6002CEE34 /* AdvertisingListTableViewController.swift */,
-			);
-			name = AdvertisingList;
-			sourceTree = "<group>";
-		};
-		E06C802C1F661FF7002C9E96 /* Tableviews */ = {
-			isa = PBXGroup;
-			children = (
-				E06C802D1F66203E002C9E96 /* MyAdvertisingsListTableView.storyboard */,
-			);
-			name = Tableviews;
-			sourceTree = "<group>";
-		};
-		E06C802F1F662467002C9E96 /* MyAdvertisingsList */ = {
-			isa = PBXGroup;
-			children = (
-				E06C80301F662482002C9E96 /* MyAdvertisingLisTableViewController.swift */,
-				E06C80321F6624A8002C9E96 /* MyAdvertisingListTableViewCell.swift */,
-				E06C80341F6624B9002C9E96 /* MyAdvertisingViewController.swift */,
-			);
-			name = MyAdvertisingsList;
 			sourceTree = "<group>";
 		};
 		E0B3094D1F41C2D400666BF4 = {

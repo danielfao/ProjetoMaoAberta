@@ -28,7 +28,7 @@
             </objects>
             <point key="canvasLocation" x="-362" y="132"/>
         </scene>
-        <!--Company Profile View Controller-->
+        <!--Perfil-->
         <scene sceneID="mH5-OQ-CGZ">
             <objects>
                 <viewController id="giu-6A-azY" customClass="CompanyProfileViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,7 +231,7 @@
                             <constraint firstItem="Onh-at-Wu1" firstAttribute="top" secondItem="ihh-W5-7EU" secondAttribute="top" id="nHZ-60-toU"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LiH-mC-v5D">
+                    <navigationItem key="navigationItem" title="Perfil" id="LiH-mC-v5D">
                         <barButtonItem key="rightBarButtonItem" title="Sair" id="JNR-NS-b2Q">
                             <connections>
                                 <action selector="didTapLogout:" destination="giu-6A-azY" id="MqE-jr-Gna"/>

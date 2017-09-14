@@ -55,6 +55,7 @@ extension UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    //Logout user from firebase
     func logout() {
         let firebaseAuth = Auth.auth()
         do {

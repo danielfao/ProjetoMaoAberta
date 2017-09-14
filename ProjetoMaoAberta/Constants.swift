@@ -106,3 +106,34 @@ struct Messages {
     static let EmailSentSuccessfully : String! = "Uma nova senha foi enviada\n para o seu e-mail."
     static let DataUpdated : String! = "Seus dados\n foram atualizados com sucesso."
 }
+
+struct FirebaseNodes {
+    private init() {}
+    
+    struct UserType {
+        static let Root : String! = "tipo"
+        static let Client : String! = "voluntario"
+        static let Company : String! = "organizacao"
+    }
+    
+    struct Client {
+        static let Root : String! = "usuarios"
+        static let Name : String! = "nome"
+        static let PhoneNumber : String! = "telefone"
+        static let Email : String! = "email"
+    }
+    
+    struct Company {
+        static let Root : String! = "organizacoes"
+        static let Name : String! = "nome"
+        static let NickName : String! = "nomeFantasia"
+        static let Cnpj : String! = "cnpj"
+        static let ResponsibleName : String! = "nomeResponsavel"
+        static let Email : String! = "email"
+        static let PhoneNumber : String! = "telefone"
+        static let Facebook : String! = "facebook"
+        static let Twitter : String! = "twitter"
+        static let Website : String! = "website"
+        static let Description : String! = "descricao"
+    }
+}

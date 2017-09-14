@@ -7,30 +7,37 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class InitialViewController: UIViewController {
     
-    let type: Bool = true
-    let userIsLogged: Bool = false
+    //MARK: - Variables
+    var database: DatabaseReference!
+    var user: User?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.isHidden = false
+        
+        database = Database.database().reference()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        //buscar user defaults
-        if (userIsLogged) {
-            if(type) {
-                let sb = UIStoryboard(name: Storyboards.ClientTabBarStoryboard, bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: ViewControllers.ClientTabbarViewController)
-                self.navigationController?.present(vc, animated: true, completion: nil)
-            } else {
-                let sb = UIStoryboard(name: Storyboards.CompanyTabBarStoryboard, bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: ViewControllers.CompanyTabbarViewController)
-                self.navigationController?.present(vc, animated: true, completion: nil)
+        self.user = Auth.auth().currentUser
+        if user != nil {
+            getUserType { (userType) in
+                if(userType == "voluntario") {
+                    let sb = UIStoryboard(name: Storyboards.ClientTabBarStoryboard, bundle: nil)
+                    let vc = sb.instantiateViewController(withIdentifier: ViewControllers.ClientTabbarViewController)
+                    self.navigationController?.present(vc, animated: true, completion: nil)
+                } else {
+                    let sb = UIStoryboard(name: Storyboards.CompanyTabBarStoryboard, bundle: nil)
+                    let vc = sb.instantiateViewController(withIdentifier: ViewControllers.CompanyTabbarViewController)
+                    self.navigationController?.present(vc, animated: true, completion: nil)
+                }
             }
         } else {
             let sb = UIStoryboard(name: Storyboards.MainLoginStoryboard, bundle: nil)
@@ -38,9 +45,13 @@ class InitialViewController: UIViewController {
             self.navigationController?.pushViewController(vc, animated: true)
         }
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    func getUserType(_ completion: @escaping (String) -> Void) {
+        database.child(FirebaseNodes.UserType.Root).child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let dict = snapshot.value as? [String : Any]
+            if let type = dict? [FirebaseNodes.UserType.Root] as? String {
+                completion(type)
+            }
+        })
     }
 }

@@ -24,7 +24,7 @@ class ClientProfileViewController: UIViewController {
     var database: DatabaseReference!
     
     //MARK: - Constants
-    let user = Auth.auth().currentUser
+    var user: User?
     
     //MARK: - Functions
     override func viewDidLoad() {
@@ -36,6 +36,7 @@ class ClientProfileViewController: UIViewController {
         self.hideKeyboard()
         
         database = Database.database().reference()
+        self.user = Auth.auth().currentUser
         getUserData()
     }
 
@@ -44,14 +45,23 @@ class ClientProfileViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if let user = self.user {
+            database.child(FirebaseNodes.Client.Root).child(user.uid).removeAllObservers()
+        }
+    }
+    
     func getUserData() {
-            database.child("usuarios").child((user?.uid)!).observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            
-            self.nameTextField.text = value?["nome"] as? String
-            self.emailTextField.text = value?["email"] as? String
-            self.phoneNumberTextField.text = value?["telefone"] as? String
-        })
+        if let user = self.user {
+            database.child(FirebaseNodes.Client.Root).child(user.uid).observeSingleEvent(of: .value, with: { (snapshot) in
+                let value = snapshot.value as? NSDictionary
+                
+                self.nameTextField.text = value?[FirebaseNodes.Client.Name] as? String
+                self.emailTextField.text = value?[FirebaseNodes.Client.Email] as? String
+                self.phoneNumberTextField.text = value?[FirebaseNodes.Client.PhoneNumber] as? String
+            })
+        }
     }
     
     //MARK: - IBActions
@@ -65,7 +75,7 @@ class ClientProfileViewController: UIViewController {
         if (name?.isEmpty)! || (phoneNumber?.isEmpty)! {
             messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
         } else {
-            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber])
+            self.database.child(FirebaseNodes.Client.Root).child((user?.uid)!).setValue([FirebaseNodes.Client.Name : name, FirebaseNodes.Client.Email: email, FirebaseNodes.Client.PhoneNumber : phoneNumber])
             self.messageAlert(title: "Sucesso", message: Messages.DataUpdated)
         }
         
@@ -74,7 +84,6 @@ class ClientProfileViewController: UIViewController {
                 messageAlert(title: "Dados Incorretos", message: ErrorMessages.PasswordsAndConfirmIncorret )
             } else {
                 Auth.auth().currentUser?.updatePassword(to: password!) { (error) in
-                    //FIXME: - Implements Update Password code
                     if error != nil {
                         self.messageAlert(title: "Erro", message: ErrorMessages.AuthenticationError)
                     } else {

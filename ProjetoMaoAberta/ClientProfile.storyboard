@@ -29,7 +29,7 @@
             </objects>
             <point key="canvasLocation" x="-327" y="89"/>
         </scene>
-        <!--Client Profile View Controller-->
+        <!--Perfil-->
         <scene sceneID="4Ur-WR-fj7">
             <objects>
                 <viewController id="bpa-s1-ivC" customClass="ClientProfileViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
@@ -122,7 +122,7 @@
                             <constraint firstAttribute="trailing" secondItem="u6u-CQ-NVi" secondAttribute="trailing" constant="32" id="yfS-Wd-dpv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Xld-xJ-7x9">
+                    <navigationItem key="navigationItem" title="Perfil" id="Xld-xJ-7x9">
                         <barButtonItem key="rightBarButtonItem" title="Sair" id="1uc-So-HJq">
                             <connections>
                                 <action selector="didTapLogout:" destination="bpa-s1-ivC" id="Ga9-5H-tpK"/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseDatabase
 
 protocol RegisterCompanyViewControllerDelegate {
     func didRegisterSuccess()
@@ -25,6 +26,7 @@ class RegisterCompanyViewController: UIViewController {
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
     //MARK: - Variables
+    var database: DatabaseReference!
     var delegate: RegisterCompanyViewControllerDelegate?
     
     //MARK: - Functions
@@ -41,6 +43,9 @@ class RegisterCompanyViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         self.showKeyboard()
         self.hideKeyboard()
+        
+        //Setup Firebase database reference
+        database = Database.database().reference()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -79,7 +84,11 @@ class RegisterCompanyViewController: UIViewController {
                         if user == nil {
                             self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                         } else {
-                            self.performSegue(withIdentifier: Segues.LoginCompanyToCompanyProfileSegue, sender: nil)
+                            self.database.child(FirebaseNodes.Company.Root).child((user?.uid)!).setValue([FirebaseNodes.Company.Name : name, FirebaseNodes.Company.NickName : nickName, FirebaseNodes.Company.Cnpj : cnpj, FirebaseNodes.Company.ResponsibleName : responsibleName, FirebaseNodes.Company.Email : email, FirebaseNodes.Company.PhoneNumber : phoneNumber])
+                            self.database.child(FirebaseNodes.UserType.Root).child((user?.uid)!).setValue([FirebaseNodes.UserType.Root : FirebaseNodes.UserType.Company])
+                            
+                            self.navigationController?.popViewController(animated: false)
+                            self.delegate?.didRegisterSuccess()
                         }
                     } else {
                         let errorRecovered = error! as NSError

@@ -43,6 +43,7 @@ class RegisterClientViewController: UIViewController {
         self.showKeyboard()
         self.hideKeyboard()
         
+        //Setup Firebase database reference
         database = Database.database().reference()
     }
     
@@ -79,8 +80,8 @@ class RegisterClientViewController: UIViewController {
                         if user == nil {
                             self.messageAlert(title: "Erro ao Autenticar", message: ErrorMessages.AuthenticationError)
                         } else {
-                            self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber])
-                            self.database.child("tipo").child((user?.uid)!).setValue(["tipo" : "voluntario"])
+                            self.database.child(FirebaseNodes.Client.Root).child((user?.uid)!).setValue([FirebaseNodes.Client.Name : name, FirebaseNodes.Client.Email: email, FirebaseNodes.Client.PhoneNumber : phoneNumber])
+                            self.database.child(FirebaseNodes.UserType.Root).child((user?.uid)!).setValue([FirebaseNodes.UserType.Root : FirebaseNodes.UserType.Client])
                             
                             self.navigationController?.popViewController(animated: false)
                             self.delegate?.didRegisterSuccess()

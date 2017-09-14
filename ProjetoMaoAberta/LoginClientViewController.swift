@@ -26,11 +26,6 @@ class LoginClientViewController: UIViewController, RegisterClientViewControllerD
         passwordTextField.text = ""
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == Segues.LoginClientToRegisterSegue {
             if let vc = segue.destination as? RegisterClientViewController {
