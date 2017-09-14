@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 extension UIViewController {
     func hideKeyboardWhenTappedAround() {
@@ -52,5 +53,16 @@ extension UIViewController {
         
         alert.addAction(cancelAction)
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func logout() {
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+            self.messageAlert(title: "Erro", message: ErrorMessages.LogoutError)
+        }
     }
 }

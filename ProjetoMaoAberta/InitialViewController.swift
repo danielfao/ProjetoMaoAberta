@@ -35,7 +35,7 @@ class InitialViewController: UIViewController {
         } else {
             let sb = UIStoryboard(name: Storyboards.MainLoginStoryboard, bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: ViewControllers.MainLoginViewController)
-            self.navigationController?.present(vc, animated: true, completion: nil)
+            self.navigationController?.pushViewController(vc, animated: true)
         }
     }
 

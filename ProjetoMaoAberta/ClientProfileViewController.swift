@@ -54,21 +54,20 @@ class ClientProfileViewController: UIViewController {
         })
     }
     
-    func updateData() {
+    //MARK: - IBActions
+    @IBAction func didTapUpdateButton(_ sender: Any) {
         let name = nameTextField.text
         let phoneNumber = phoneNumberTextField.text
         let email = emailTextField.text
+        let password = passwordTextField.text
+        let confirmPassword = confirmPasswordTextField.text
         
         if (name?.isEmpty)! || (phoneNumber?.isEmpty)! {
             messageAlert(title: "Dados Incompletos", message: ErrorMessages.EmptyFields)
         } else {
             self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber])
+            self.messageAlert(title: "Sucesso", message: Messages.DataUpdated)
         }
-    }
-    
-    func updatePassword() {
-        let password = passwordTextField.text
-        let confirmPassword = confirmPasswordTextField.text
         
         if (!((password?.isEmpty)!)) {
             if (password != confirmPassword) {
@@ -84,14 +83,9 @@ class ClientProfileViewController: UIViewController {
                 }
             }
         }
-
     }
     
-    //MARK: - IBActions
-    @IBAction func didTapUpdateButton(_ sender: Any) {
-        updateData()
-        updatePassword()
-        self.reloadInputViews()
+    @IBAction func didTapLogout(_ sender: Any) {
+        logout()
     }
-    
 }

@@ -10,6 +10,10 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
+protocol RegisterClientViewControllerDelegate {
+    func didRegisterSuccess()
+}
+
 class RegisterClientViewController: UIViewController {
     
     //MARK: - IBOutlets
@@ -22,6 +26,7 @@ class RegisterClientViewController: UIViewController {
     
     //MARK: - Variables
     var database: DatabaseReference!
+    var delegate: RegisterClientViewControllerDelegate?
     
     //MARK: - Functions
     override func viewDidLoad() {
@@ -30,6 +35,7 @@ class RegisterClientViewController: UIViewController {
         //Setup navbar and change the back button color
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.navigationBar.tintColor = UIColor.white;
         
         //Keyboard functions
@@ -76,7 +82,8 @@ class RegisterClientViewController: UIViewController {
                             self.database.child("usuarios").child((user?.uid)!).setValue(["nome" : name, "email" : email, "telefone" : phoneNumber])
                             self.database.child("tipo").child((user?.uid)!).setValue(["tipo" : "voluntario"])
                             
-                            self.performSegue(withIdentifier: Segues.LoginClientToClientProfileSegue, sender: nil)
+                            self.navigationController?.popViewController(animated: false)
+                            self.delegate?.didRegisterSuccess()
                         }
                     } else {
                         let errorRecovered = error! as NSError

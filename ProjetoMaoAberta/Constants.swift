@@ -28,7 +28,7 @@ struct Storyboards {
     static let ForgotPasswordStoryboard : String! = "ForgotPassword"
     static let ClientTabBarStoryboard : String! = "ClientTabBar"
     static let CompanyTabBarStoryboard : String! = "CompanyTabBar"
-    static let InitialSetUpStoryboard : String! = "InitialSetUp"
+    static let MainStoryboard : String! = "Main"
 }
 
 //MARK: - Storyboards
@@ -46,6 +46,7 @@ struct ViewControllers {
     static let NewAdvertisingViewController : String! = "newAdvertisingViewController"
     static let ClientTabbarViewController : String! = "clientTabbarViewController"
     static let CompanyTabbarViewController : String! = "companyTabbarViewController"
+    static let InitialViewController : String! = "initialViewController"
 }
 
 struct Cells {
@@ -96,6 +97,7 @@ struct ErrorMessages {
     static let InvalidEmail : String! = "E-mail inválido.\n Digite um e-mail válido."
     static let WeakPassword : String! = "Senha muito fraca.\n A senha deve conter 6 caracteres com letras e números."
     static let EmailAlreadyUsed : String! = "E-mail já está sendo utilizado.\n Digite outro e-mail válido."
+    static let LogoutError : String! = "Erro ao tentar deslogar.\n Por favor, tente novamente."
 }
 
 struct Messages {

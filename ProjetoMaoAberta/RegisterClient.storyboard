@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oJg-Hc-ppa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ylB-mY-ZU2">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,22 +9,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
-        <scene sceneID="msy-CI-P59">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pmi-47-OYj" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <navigationController id="oJg-Hc-ppa" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BFd-GN-Eqc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="ylB-mY-ZU2" kind="relationship" relationship="rootViewController" id="QB8-18-hWG"/>
-                    </connections>
-                </navigationController>
-            </objects>
-            <point key="canvasLocation" x="-556" y="-60"/>
-        </scene>
         <!--Register Client-->
         <scene sceneID="P6p-yg-aZb">
             <objects>

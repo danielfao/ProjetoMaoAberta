@@ -122,7 +122,13 @@
                             <constraint firstAttribute="trailing" secondItem="u6u-CQ-NVi" secondAttribute="trailing" constant="32" id="yfS-Wd-dpv"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Xld-xJ-7x9"/>
+                    <navigationItem key="navigationItem" id="Xld-xJ-7x9">
+                        <barButtonItem key="rightBarButtonItem" title="Sair" id="1uc-So-HJq">
+                            <connections>
+                                <action selector="didTapLogout:" destination="bpa-s1-ivC" id="Ga9-5H-tpK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="confirmPasswordTextField" destination="u6u-CQ-NVi" id="pPq-RU-f3U"/>
                         <outlet property="emailTextField" destination="7uu-wm-Dvb" id="yz1-rp-PQG"/>

@@ -12,7 +12,7 @@
         <!--Initial View Controller-->
         <scene sceneID="GiV-zK-WCS">
             <objects>
-                <viewController storyboardIdentifier="InitialSetUp" id="m5R-xm-5EX" customClass="InitialViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialViewController" id="m5R-xm-5EX" customClass="InitialViewController" customModule="ProjetoMaoAberta" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="obm-4r-3kp"/>
                         <viewControllerLayoutGuide type="bottom" id="F6h-4J-gue"/>

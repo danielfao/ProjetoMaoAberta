@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginCompanyViewController: UIViewController {
+class LoginCompanyViewController: UIViewController, RegisterCompanyViewControllerDelegate {
 
     //MARK: - IBOutlets
     @IBOutlet weak var emailTextField: UITextField!
@@ -20,9 +20,23 @@ class LoginCompanyViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        emailTextField.text = ""
+        passwordTextField.text = ""
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Segues.LoginCompanyToRegisterSegue {
+            if let vc = segue.destination as? RegisterCompanyViewController {
+                vc.delegate = self
+            }
+        }
     }
     
     //MARK: - IBActions
@@ -54,19 +68,19 @@ class LoginCompanyViewController: UIViewController {
     }
     
     @IBAction func didTapCreateNewAccountButton(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: Storyboards.RegisterCompanyStoryboard, bundle: nil)
-//        let registerCompanyViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.RegisterCompanyViewController) as! RegisterCompanyViewController
-//        navigationController?.pushViewController(registerCompanyViewController, animated: true)
-        self.performSegue(withIdentifier: Segues.LoginClientToForgotPasswordSegue, sender: nil)
+        self.performSegue(withIdentifier: Segues.LoginCompanyToRegisterSegue, sender: nil)
 
     }
     
     @IBAction func didTapForgotPasswordButton(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: Storyboards.ForgotPasswordStoryboard, bundle: nil)
-//        let forgotPasswordViewController = storyboard.instantiateViewController(withIdentifier: ViewControllers.ForgotPasswordViewController) as! ForgotPasswordViewController
-//        navigationController?.pushViewController(forgotPasswordViewController, animated: true)
-        self.performSegue(withIdentifier: Segues.LoginClientToForgotPasswordSegue, sender: nil)
+        self.performSegue(withIdentifier: Segues.LoginCompanyToForgotPasswordSegue, sender: nil)
 
     }
     
+    //MARK: - RegisterClientViewControllerDelegate
+    func didRegisterSuccess() {
+        let sb = UIStoryboard(name: Storyboards.CompanyTabBarStoryboard, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: ViewControllers.CompanyTabbarViewController)
+        self.navigationController?.present(vc, animated: true, completion: nil)
+    }
 }

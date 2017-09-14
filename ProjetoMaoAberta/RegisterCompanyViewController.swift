@@ -9,6 +9,9 @@
 import UIKit
 import FirebaseAuth
 
+protocol RegisterCompanyViewControllerDelegate {
+    func didRegisterSuccess()
+}
 class RegisterCompanyViewController: UIViewController {
 
     //MARK: - IBOutlets
@@ -20,6 +23,9 @@ class RegisterCompanyViewController: UIViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    
+    //MARK: - Variables
+    var delegate: RegisterCompanyViewControllerDelegate?
     
     //MARK: - Functions
     override func viewDidLoad() {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lPN-LP-m70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Nid-52-994">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -95,10 +95,10 @@
         <!--ForgotPassword-->
         <scene sceneID="pmc-GO-THL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oyg-Up-UZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ForgotPassword" id="7uP-U5-Krr" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oyg-Up-UZp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1007" y="851"/>
+            <point key="canvasLocation" x="1964" y="837"/>
         </scene>
         <!--CompanyProfile-->
         <scene sceneID="faj-EB-Xyu">
@@ -106,7 +106,7 @@
                 <viewControllerPlaceholder storyboardName="CompanyProfile" id="BbY-j6-wXU" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fMX-2t-QZU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1268" y="851"/>
+            <point key="canvasLocation" x="2226" y="837"/>
         </scene>
         <!--ClientProfile-->
         <scene sceneID="Jqb-oM-02X">
@@ -114,7 +114,7 @@
                 <viewControllerPlaceholder storyboardName="ClientProfile" id="aAi-9F-Iqr" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AqC-R1-ZFj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="523" y="851"/>
+            <point key="canvasLocation" x="1480" y="837"/>
         </scene>
         <!--Login Client-->
         <scene sceneID="j5s-2r-fbQ">
@@ -214,15 +214,15 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tz0-x2-U73" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="557"/>
+            <point key="canvasLocation" x="1239" y="543"/>
         </scene>
         <!--ForgotPassword-->
         <scene sceneID="HGX-aw-Z83">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="urT-Mk-VeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewControllerPlaceholder storyboardName="ForgotPassword" id="8g2-UK-Ylg" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urT-Mk-VeX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="281" y="851"/>
+            <point key="canvasLocation" x="1239" y="837"/>
         </scene>
         <!--RegisterClient-->
         <scene sceneID="VKY-EO-L5P">
@@ -230,7 +230,7 @@
                 <viewControllerPlaceholder storyboardName="RegisterClient" id="TEG-yh-JSh" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJT-2S-abU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="851"/>
+            <point key="canvasLocation" x="940" y="837"/>
         </scene>
         <!--Login Company-->
         <scene sceneID="cHd-ci-cTN">
@@ -330,7 +330,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOd-NS-ek2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="556"/>
+            <point key="canvasLocation" x="1866" y="542"/>
         </scene>
         <!--RegisterCompany-->
         <scene sceneID="cNq-XO-q60">
@@ -338,25 +338,7 @@
                 <viewControllerPlaceholder storyboardName="RegisterCompany" id="RwC-xm-7FQ" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Zp-ar-uZn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="851"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2pR-Mt-fgz">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lPN-LP-m70" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KzD-cF-4Qh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Nid-52-994" kind="relationship" relationship="rootViewController" id="lj9-x5-VfZ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kzb-AQ-aGz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="597.60000000000002" y="-81.409295352323838"/>
+            <point key="canvasLocation" x="1715" y="837"/>
         </scene>
     </scenes>
     <resources>

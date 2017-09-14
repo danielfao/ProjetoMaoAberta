@@ -29,6 +29,11 @@ class ForgotPasswordViewController: UIViewController {
         //Dismiss Keyboard
         self.hideKeyboardWhenTappedAround()
     }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        emailTextField.text = ""
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -43,7 +48,6 @@ class ForgotPasswordViewController: UIViewController {
             self.messageAlert(title: "Erro", message: ErrorMessages.EmailFieldEmpty)
         } else {
             Auth.auth().sendPasswordReset(withEmail: email!) { (error) in
-                
                 if error != nil {
                     self.messageAlert(title: "Erro", message: ErrorMessages.UnexpectedError)
                 } else {
@@ -52,5 +56,4 @@ class ForgotPasswordViewController: UIViewController {
             }
         }
     }
-    
 }
